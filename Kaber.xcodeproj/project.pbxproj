@@ -24,6 +24,20 @@
 		D36FFBDC2A8C0FC7002A144E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBDE2A8C0FC7002A144E /* Localizable.strings */; };
 		D36FFBE22A8C109B002A144E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFBE02A8C109B002A144E /* Strings+Generated.swift */; };
 		D36FFBE32A8C109B002A144E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFBE12A8C109B002A144E /* XCAssets+Generated.swift */; };
+		D36FFBE62A8C1A50002A144E /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFBE52A8C1A50002A144E /* Utilites.swift */; };
+		D36FFBE82A8C1CC0002A144E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFBE72A8C1CC0002A144E /* UITextField.swift */; };
+		D36FFBEC2A8C1FC2002A144E /* newsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFBEA2A8C1FC2002A144E /* newsCell.swift */; };
+		D36FFBED2A8C1FC2002A144E /* newsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBEB2A8C1FC2002A144E /* newsCell.xib */; };
+		D36FFBF82A8C2528002A144E /* Blinker-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF02A8C2528002A144E /* Blinker-SemiBold.ttf */; };
+		D36FFBF92A8C2528002A144E /* Blinker-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF12A8C2528002A144E /* Blinker-Black.ttf */; };
+		D36FFBFA2A8C2528002A144E /* Blinker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF22A8C2528002A144E /* Blinker-Regular.ttf */; };
+		D36FFBFB2A8C2528002A144E /* Blinker-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF32A8C2528002A144E /* Blinker-Light.ttf */; };
+		D36FFBFC2A8C2528002A144E /* Blinker-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF42A8C2528002A144E /* Blinker-Bold.ttf */; };
+		D36FFBFD2A8C2528002A144E /* Blinker-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF52A8C2528002A144E /* Blinker-ExtraBold.ttf */; };
+		D36FFBFE2A8C2528002A144E /* Blinker-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF62A8C2528002A144E /* Blinker-Thin.ttf */; };
+		D36FFBFF2A8C2528002A144E /* Blinker-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF72A8C2528002A144E /* Blinker-ExtraLight.ttf */; };
+		D36FFC012A8C2897002A144E /* newsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFC002A8C2897002A144E /* newsResponse.swift */; };
+		D36FFC032A8C2EFD002A144E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFC022A8C2EFD002A144E /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +62,20 @@
 		D36FFBDF2A8C0FE5002A144E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D36FFBE02A8C109B002A144E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		D36FFBE12A8C109B002A144E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		D36FFBE52A8C1A50002A144E /* Utilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
+		D36FFBE72A8C1CC0002A144E /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		D36FFBEA2A8C1FC2002A144E /* newsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsCell.swift; sourceTree = "<group>"; };
+		D36FFBEB2A8C1FC2002A144E /* newsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newsCell.xib; sourceTree = "<group>"; };
+		D36FFBF02A8C2528002A144E /* Blinker-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-SemiBold.ttf"; sourceTree = "<group>"; };
+		D36FFBF12A8C2528002A144E /* Blinker-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Black.ttf"; sourceTree = "<group>"; };
+		D36FFBF22A8C2528002A144E /* Blinker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Regular.ttf"; sourceTree = "<group>"; };
+		D36FFBF32A8C2528002A144E /* Blinker-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Light.ttf"; sourceTree = "<group>"; };
+		D36FFBF42A8C2528002A144E /* Blinker-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Bold.ttf"; sourceTree = "<group>"; };
+		D36FFBF52A8C2528002A144E /* Blinker-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D36FFBF62A8C2528002A144E /* Blinker-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Thin.ttf"; sourceTree = "<group>"; };
+		D36FFBF72A8C2528002A144E /* Blinker-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraLight.ttf"; sourceTree = "<group>"; };
+		D36FFC002A8C2897002A144E /* newsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsResponse.swift; sourceTree = "<group>"; };
+		D36FFC022A8C2EFD002A144E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		FD821EE666081078D970DE36 /* Pods-Kaber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaber.debug.xcconfig"; path = "Target Support Files/Pods-Kaber/Pods-Kaber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +161,7 @@
 		D3507AE42A8BEDFA00DE95D1 /* Assists */ = {
 			isa = PBXGroup;
 			children = (
+				D36FFBEE2A8C2522002A144E /* fonts */,
 				D36FFBD92A8C0F3C002A144E /* localizable */,
 				D3507AD72A8BECC500DE95D1 /* Assets.xcassets */,
 				D3507ADC2A8BECC500DE95D1 /* Info.plist */,
@@ -165,6 +194,7 @@
 				D3507AE92A8BEE3A00DE95D1 /* view model */,
 				D3507AEA2A8BEE4200DE95D1 /* controller */,
 				D3507AE82A8BEE3300DE95D1 /* view */,
+				D36FFBE92A8C1FA4002A144E /* cell */,
 			);
 			path = "news Screen";
 			sourceTree = "<group>";
@@ -206,6 +236,9 @@
 			children = (
 				D3507AFE2A8BEF3900DE95D1 /* screens */,
 				D3507AFC2A8BEF3400DE95D1 /* UIViewController.swift */,
+				D36FFBE52A8C1A50002A144E /* Utilites.swift */,
+				D36FFBE72A8C1CC0002A144E /* UITextField.swift */,
+				D36FFC022A8C2EFD002A144E /* UIImageView.swift */,
 			);
 			path = "UICustoms + Extensions";
 			sourceTree = "<group>";
@@ -221,6 +254,7 @@
 		D36FFBD72A8C0DC1002A144E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D36FFC002A8C2897002A144E /* newsResponse.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -242,6 +276,38 @@
 			path = localizable;
 			sourceTree = "<group>";
 		};
+		D36FFBE92A8C1FA4002A144E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				D36FFBEA2A8C1FC2002A144E /* newsCell.swift */,
+				D36FFBEB2A8C1FC2002A144E /* newsCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		D36FFBEE2A8C2522002A144E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D36FFBEF2A8C2528002A144E /* Blinker */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		D36FFBEF2A8C2528002A144E /* Blinker */ = {
+			isa = PBXGroup;
+			children = (
+				D36FFBF02A8C2528002A144E /* Blinker-SemiBold.ttf */,
+				D36FFBF12A8C2528002A144E /* Blinker-Black.ttf */,
+				D36FFBF22A8C2528002A144E /* Blinker-Regular.ttf */,
+				D36FFBF32A8C2528002A144E /* Blinker-Light.ttf */,
+				D36FFBF42A8C2528002A144E /* Blinker-Bold.ttf */,
+				D36FFBF52A8C2528002A144E /* Blinker-ExtraBold.ttf */,
+				D36FFBF62A8C2528002A144E /* Blinker-Thin.ttf */,
+				D36FFBF72A8C2528002A144E /* Blinker-ExtraLight.ttf */,
+			);
+			path = Blinker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,12 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3507ADF2A8BECC500DE95D1 /* Build configuration list for PBXNativeTarget "Kaber" */;
 			buildPhases = (
+				D36FFBE42A8C110C002A144E /* Swift Gen */,
 				ED0CBDD7490CF8EAFA82F318 /* [CP] Check Pods Manifest.lock */,
 				D3507AC72A8BECC300DE95D1 /* Sources */,
 				D3507AC82A8BECC300DE95D1 /* Frameworks */,
 				D3507AC92A8BECC300DE95D1 /* Resources */,
 				E25C95EEC1066573C82D0434 /* [CP] Embed Pods Frameworks */,
-				D36FFBE42A8C110C002A144E /* Swift Gen */,
 			);
 			buildRules = (
 			);
@@ -305,8 +371,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3507AEF2A8BEE6100DE95D1 /* newsViewController.xib in Resources */,
+				D36FFBFD2A8C2528002A144E /* Blinker-ExtraBold.ttf in Resources */,
+				D36FFBF82A8C2528002A144E /* Blinker-SemiBold.ttf in Resources */,
+				D36FFBFF2A8C2528002A144E /* Blinker-ExtraLight.ttf in Resources */,
 				D36FFBDC2A8C0FC7002A144E /* Localizable.strings in Resources */,
+				D36FFBFB2A8C2528002A144E /* Blinker-Light.ttf in Resources */,
+				D36FFBED2A8C1FC2002A144E /* newsCell.xib in Resources */,
+				D36FFBFC2A8C2528002A144E /* Blinker-Bold.ttf in Resources */,
+				D36FFBFE2A8C2528002A144E /* Blinker-Thin.ttf in Resources */,
 				D3507ADB2A8BECC500DE95D1 /* LaunchScreen.storyboard in Resources */,
+				D36FFBFA2A8C2528002A144E /* Blinker-Regular.ttf in Resources */,
+				D36FFBF92A8C2528002A144E /* Blinker-Black.ttf in Resources */,
 				D3507AD82A8BECC500DE95D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/Generated/GeneratedSwiftCode.swift\"\n\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n";
 		};
 		E25C95EEC1066573C82D0434 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -386,10 +461,15 @@
 				D3507AF82A8BEEC000DE95D1 /* BaseCoordinator.swift in Sources */,
 				D3507AF42A8BEE9100DE95D1 /* newsCoordinator.swift in Sources */,
 				D3507AD12A8BECC300DE95D1 /* SceneDelegate.swift in Sources */,
+				D36FFC012A8C2897002A144E /* newsResponse.swift in Sources */,
 				D3507AEE2A8BEE6100DE95D1 /* newsViewController.swift in Sources */,
+				D36FFBEC2A8C1FC2002A144E /* newsCell.swift in Sources */,
+				D36FFBE82A8C1CC0002A144E /* UITextField.swift in Sources */,
 				D3507AF12A8BEE7B00DE95D1 /* newsViewModel.swift in Sources */,
 				D3507AF92A8BEEC000DE95D1 /* AppCoordinator.swift in Sources */,
 				D36FFBE22A8C109B002A144E /* Strings+Generated.swift in Sources */,
+				D36FFC032A8C2EFD002A144E /* UIImageView.swift in Sources */,
+				D36FFBE62A8C1A50002A144E /* Utilites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

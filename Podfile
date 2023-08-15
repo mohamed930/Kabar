@@ -22,6 +22,8 @@ target 'Kaber' do
   
   pod 'SwiftGen'
   
+  pod 'IQKeyboardManagerSwift'
+  
   post_install do |installer|
     installer.generated_projects.each do |project|
           project.targets.each do |target|

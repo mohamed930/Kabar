@@ -15,6 +15,10 @@ internal enum myStrings {
   /// 
   ///   Created by Mohamed Ali on 15/08/2023.
   internal static let news = myStrings.tr("Localizable", "news", fallback: "news")
+  /// Please wait
+  internal static let pleaseWait = myStrings.tr("Localizable", "pleaseWait", fallback: "Please wait")
+  /// search
+  internal static let search = myStrings.tr("Localizable", "search", fallback: "search")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

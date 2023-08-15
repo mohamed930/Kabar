@@ -6,4 +6,6 @@
   
 */
 
-"news"   = "news";
+"news"          = "news";
+"pleaseWait"    = "Please wait";
+"search"        = "search";

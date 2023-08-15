@@ -56,6 +56,17 @@
 ##  - `coredata` (for CoreData models)
 ##  - `json`, `yaml` and `plist` (to parse custom JSON/YAML/Plist files and generate code from their content)
 ## …
+
+#fonts:
+#  inputs:
+#    - Kaber/Assists/fonts/
+#  outputs:
+#    - templateName: swift5
+#      params:
+#        forceProvidesNamespaces: true
+#        enumName: myfonts
+#      output: Kaber/constants/fonts.swift
+
 ##
 ## For more info, use `swiftgen config doc` to open the full documentation on GitHub.
 ## https://github.com/SwiftGen/SwiftGen/tree/6.6.2/Documentation/

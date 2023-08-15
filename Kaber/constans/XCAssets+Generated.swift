@@ -25,7 +25,15 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum images {
   internal static let accentColor = ColorAsset(name: "AccentColor")
+  internal static let bodyTextGrayScale = ColorAsset(name: "Body Text - GrayScale")
+  internal static let primaryDefault = ColorAsset(name: "Primary - default")
+  internal static let buttonFont = ColorAsset(name: "button font")
+  internal static let author = ImageAsset(name: "Author")
+  internal static let articleImage = ImageAsset(name: "articleImage")
+  internal static let homeScreenLogo = ImageAsset(name: "homeScreenLogo")
   internal static let kaberLauncScreen = ImageAsset(name: "kaberLauncScreen")
+  internal static let searchIcon = ImageAsset(name: "searchIcon")
+  internal static let time = ImageAsset(name: "time")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

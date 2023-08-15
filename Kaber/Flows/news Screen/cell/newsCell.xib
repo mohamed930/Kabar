@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Blinker-Regular.ttf">
+            <string>Blinker-Regular</string>
+        </array>
+        <array key="Blinker-SemiBold.ttf">
+            <string>Blinker-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="433" id="KGk-i7-Jjw" customClass="newsCell" customModule="Kaber" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="478" height="433"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="433"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-yl-XIN">
+                        <rect key="frame" x="0.0" y="0.0" width="478" height="417"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="articleImage" translatesAutoresizingMaskIntoConstraints="NO" id="78U-v7-kLf">
+                                <rect key="frame" x="8" y="8" width="462" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="d4r-lY-62k"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The impact of the largest asteroid ever to hit Earth revealed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lns-2D-ot1">
+                                <rect key="frame" x="8" y="213.33333333333334" width="462" height="19.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19.329999999999998" id="l0L-nE-LF5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Author" translatesAutoresizingMaskIntoConstraints="NO" id="CWb-Jk-Bsh">
+                                <rect key="frame" x="8" y="236.66666666666666" width="20" height="19.999999999999972"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="HmN-Fg-t3X"/>
+                                    <constraint firstAttribute="width" constant="20" id="M7W-Uq-nZT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBC News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yG-gQ-d3f">
+                                <rect key="frame" x="32" y="238.66666666666666" width="53.333333333333343" height="15.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Blinker-SemiBold" family="Blinker" pointSize="13"/>
+                                <color key="textColor" name="Body Text - GrayScale"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="KWg-Um-2pO">
+                                <rect key="frame" x="98.333333333333329" y="240.66666666666666" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="6OH-aj-5BQ"/>
+                                    <constraint firstAttribute="width" constant="12" id="cgr-pj-83C"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-Ng-7bM">
+                                <rect key="frame" x="114.33333333333333" y="238.66666666666666" width="37.666666666666671" height="15.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8f-I5-bxP">
+                                        <rect key="frame" x="0.0" y="0.0" width="14" height="15.666666666666666"/>
+                                        <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="13"/>
+                                        <color key="textColor" name="Body Text - GrayScale"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ar-Dn-BB5">
+                                        <rect key="frame" x="17.000000000000014" y="0.0" width="20.666666666666671" height="15.666666666666666"/>
+                                        <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="13"/>
+                                        <color key="textColor" name="Body Text - GrayScale"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdS-df-CTA">
+                                <rect key="frame" x="8" y="270.33333333333331" width="462" height="71.333333333333314"/>
+                                <string key="text">A structure discovered in Australia is said to be the result of the largest asteroid impact in Earth&amp;apos;s history. 
+
+The Deniliquin structure, hidden deep within the earth in the</string>
+                                <fontDescription key="fontDescription" name="AlNile" family="Al Nile" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXy-bg-zze">
+                                <rect key="frame" x="8" y="367" width="462" height="40"/>
+                                <color key="backgroundColor" name="Primary - default"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Noc-jt-q12"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Read more">
+                                    <color key="titleColor" name="button font"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lns-2D-ot1" firstAttribute="top" secondItem="78U-v7-kLf" secondAttribute="bottom" constant="22.333333333333314" id="6Wy-CD-aMe"/>
+                            <constraint firstItem="6yG-gQ-d3f" firstAttribute="leading" secondItem="CWb-Jk-Bsh" secondAttribute="trailing" constant="4" id="8SO-CU-kby"/>
+                            <constraint firstItem="KWg-Um-2pO" firstAttribute="top" secondItem="lns-2D-ot1" secondAttribute="bottom" constant="8" symbolic="YES" id="CKc-4T-gtZ"/>
+                            <constraint firstItem="KWg-Um-2pO" firstAttribute="leading" secondItem="6yG-gQ-d3f" secondAttribute="trailing" constant="13" id="Ecx-w2-Ypd"/>
+                            <constraint firstItem="CWb-Jk-Bsh" firstAttribute="leading" secondItem="lns-2D-ot1" secondAttribute="leading" id="Fid-mN-99T"/>
+                            <constraint firstItem="hMc-Ng-7bM" firstAttribute="centerY" secondItem="KWg-Um-2pO" secondAttribute="centerY" id="Gq7-Ov-pTR"/>
+                            <constraint firstAttribute="bottom" secondItem="IXy-bg-zze" secondAttribute="bottom" constant="10" id="Hlx-sH-Vdg"/>
+                            <constraint firstItem="lns-2D-ot1" firstAttribute="trailing" secondItem="78U-v7-kLf" secondAttribute="trailing" id="M43-uO-6Jf"/>
+                            <constraint firstItem="IXy-bg-zze" firstAttribute="top" secondItem="bdS-df-CTA" secondAttribute="bottom" constant="25.329999999999998" id="Piv-9c-yey"/>
+                            <constraint firstItem="6yG-gQ-d3f" firstAttribute="centerY" secondItem="CWb-Jk-Bsh" secondAttribute="centerY" id="SUe-Av-unE"/>
+                            <constraint firstItem="hMc-Ng-7bM" firstAttribute="leading" secondItem="KWg-Um-2pO" secondAttribute="trailing" constant="4" id="Ue9-Df-4av"/>
+                            <constraint firstItem="IXy-bg-zze" firstAttribute="leading" secondItem="78U-v7-kLf" secondAttribute="leading" id="dAp-OZ-FUZ"/>
+                            <constraint firstItem="bdS-df-CTA" firstAttribute="top" secondItem="6yG-gQ-d3f" secondAttribute="bottom" constant="16" id="fbm-7W-87V"/>
+                            <constraint firstItem="IXy-bg-zze" firstAttribute="trailing" secondItem="78U-v7-kLf" secondAttribute="trailing" id="g9A-yW-cxt"/>
+                            <constraint firstItem="lns-2D-ot1" firstAttribute="leading" secondItem="78U-v7-kLf" secondAttribute="leading" id="gtB-Ry-Roo"/>
+                            <constraint firstItem="bdS-df-CTA" firstAttribute="trailing" secondItem="78U-v7-kLf" secondAttribute="trailing" id="qcY-uY-Bbj"/>
+                            <constraint firstItem="CWb-Jk-Bsh" firstAttribute="top" secondItem="lns-2D-ot1" secondAttribute="bottom" constant="4" id="sn4-cS-vxy"/>
+                            <constraint firstItem="bdS-df-CTA" firstAttribute="leading" secondItem="78U-v7-kLf" secondAttribute="leading" id="vNr-lq-LC7"/>
+                            <constraint firstItem="78U-v7-kLf" firstAttribute="leading" secondItem="qHb-yl-XIN" secondAttribute="leading" constant="8" id="ype-Qk-kXc"/>
+                            <constraint firstItem="78U-v7-kLf" firstAttribute="top" secondItem="qHb-yl-XIN" secondAttribute="top" constant="8" id="z1d-RR-RKw"/>
+                            <constraint firstAttribute="trailing" secondItem="78U-v7-kLf" secondAttribute="trailing" constant="8" id="zok-VS-4Mv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qHb-yl-XIN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BsO-4s-E4i"/>
+                    <constraint firstItem="qHb-yl-XIN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WUr-eL-c0w"/>
+                    <constraint firstAttribute="bottom" secondItem="qHb-yl-XIN" secondAttribute="bottom" constant="16" id="idp-8X-Esq"/>
+                    <constraint firstAttribute="trailing" secondItem="qHb-yl-XIN" secondAttribute="trailing" id="xXd-11-cfY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="articleAuthorLabel" destination="6yG-gQ-d3f" id="v61-Vu-HcB"/>
+                <outlet property="articleImageView" destination="78U-v7-kLf" id="mSN-kv-o3N"/>
+                <outlet property="articleTitleLabel" destination="lns-2D-ot1" id="J7j-BT-Zd3"/>
+                <outlet property="descriptionLabel" destination="bdS-df-CTA" id="xdg-Sj-4aP"/>
+                <outlet property="publishDateLabel" destination="y8f-I5-bxP" id="XVZ-Tq-rwM"/>
+                <outlet property="readMoreButton" destination="IXy-bg-zze" id="sVF-R8-QfO"/>
+            </connections>
+            <point key="canvasLocation" x="196.94656488549617" y="-91.197183098591552"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Author" width="60" height="60"/>
+        <image name="articleImage" width="341" height="172"/>
+        <image name="time" width="36" height="36"/>
+        <namedColor name="Body Text - GrayScale">
+            <color red="0.3059999942779541" green="0.29399999976158142" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary - default">
+            <color red="0.094117647058823528" green="0.46666666666666667" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button font">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
