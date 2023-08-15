@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AABE2DF505981EFC02B6175A /* Pods_Kaber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8CD0D0770E73C5D284982C /* Pods_Kaber.framework */; };
 		D3507ACF2A8BECC300DE95D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3507ACE2A8BECC300DE95D1 /* AppDelegate.swift */; };
 		D3507AD12A8BECC300DE95D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3507AD02A8BECC300DE95D1 /* SceneDelegate.swift */; };
 		D3507AD82A8BECC500DE95D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3507AD72A8BECC500DE95D1 /* Assets.xcassets */; };
@@ -20,9 +21,14 @@
 		D3507AFA2A8BEEC000DE95D1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3507AF72A8BEEC000DE95D1 /* Coordinator.swift */; };
 		D3507AFD2A8BEF3400DE95D1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3507AFC2A8BEF3400DE95D1 /* UIViewController.swift */; };
 		D3507B002A8BEF3900DE95D1 /* screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3507AFF2A8BEF3900DE95D1 /* screens.swift */; };
+		D36FFBDC2A8C0FC7002A144E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBDE2A8C0FC7002A144E /* Localizable.strings */; };
+		D36FFBE22A8C109B002A144E /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFBE02A8C109B002A144E /* Strings+Generated.swift */; };
+		D36FFBE32A8C109B002A144E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFBE12A8C109B002A144E /* XCAssets+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C8CD0D0770E73C5D284982C /* Pods_Kaber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4C53C6585D49F4214356B3 /* Pods-Kaber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaber.release.xcconfig"; path = "Target Support Files/Pods-Kaber/Pods-Kaber.release.xcconfig"; sourceTree = "<group>"; };
 		D3507ACB2A8BECC300DE95D1 /* Kaber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3507ACE2A8BECC300DE95D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3507AD02A8BECC300DE95D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,11 @@
 		D3507AF72A8BEEC000DE95D1 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D3507AFC2A8BEF3400DE95D1 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D3507AFF2A8BEF3900DE95D1 /* screens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = screens.swift; sourceTree = "<group>"; };
+		D36FFBDD2A8C0FC7002A144E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D36FFBDF2A8C0FE5002A144E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D36FFBE02A8C109B002A144E /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		D36FFBE12A8C109B002A144E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		FD821EE666081078D970DE36 /* Pods-Kaber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaber.debug.xcconfig"; path = "Target Support Files/Pods-Kaber/Pods-Kaber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +56,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABE2DF505981EFC02B6175A /* Pods_Kaber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		218C077F6FCE21DE2F08D4D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD821EE666081078D970DE36 /* Pods-Kaber.debug.xcconfig */,
+				8C4C53C6585D49F4214356B3 /* Pods-Kaber.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		351017EDD7736AA4DCEF9E65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C8CD0D0770E73C5D284982C /* Pods_Kaber.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3507AC22A8BECC300DE95D1 = {
 			isa = PBXGroup;
 			children = (
 				D3507ACD2A8BECC300DE95D1 /* Kaber */,
 				D3507ACC2A8BECC300DE95D1 /* Products */,
+				218C077F6FCE21DE2F08D4D0 /* Pods */,
+				351017EDD7736AA4DCEF9E65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,9 +103,10 @@
 			children = (
 				D3507AE22A8BED6C00DE95D1 /* App Delegate */,
 				D3507AE52A8BEE1300DE95D1 /* Coordinator */,
-				D3507AEB2A8BEE4D00DE95D1 /* model */,
+				D36FFBD72A8C0DC1002A144E /* model */,
 				D3507AE32A8BED8700DE95D1 /* launch Screen */,
 				D3507AE62A8BEE1D00DE95D1 /* Flows */,
+				D36FFBD82A8C0E0F002A144E /* constans */,
 				D3507AE42A8BEDFA00DE95D1 /* Assists */,
 				D3507AFB2A8BEF1B00DE95D1 /* UICustoms + Extensions */,
 			);
@@ -101,6 +133,7 @@
 		D3507AE42A8BEDFA00DE95D1 /* Assists */ = {
 			isa = PBXGroup;
 			children = (
+				D36FFBD92A8C0F3C002A144E /* localizable */,
 				D3507AD72A8BECC500DE95D1 /* Assets.xcassets */,
 				D3507ADC2A8BECC500DE95D1 /* Info.plist */,
 			);
@@ -160,13 +193,6 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
-		D3507AEB2A8BEE4D00DE95D1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		D3507AF22A8BEE8600DE95D1 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +218,30 @@
 			path = screens;
 			sourceTree = "<group>";
 		};
+		D36FFBD72A8C0DC1002A144E /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D36FFBD82A8C0E0F002A144E /* constans */ = {
+			isa = PBXGroup;
+			children = (
+				D36FFBE02A8C109B002A144E /* Strings+Generated.swift */,
+				D36FFBE12A8C109B002A144E /* XCAssets+Generated.swift */,
+			);
+			path = constans;
+			sourceTree = "<group>";
+		};
+		D36FFBD92A8C0F3C002A144E /* localizable */ = {
+			isa = PBXGroup;
+			children = (
+				D36FFBDE2A8C0FC7002A144E /* Localizable.strings */,
+			);
+			path = localizable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3507ADF2A8BECC500DE95D1 /* Build configuration list for PBXNativeTarget "Kaber" */;
 			buildPhases = (
+				ED0CBDD7490CF8EAFA82F318 /* [CP] Check Pods Manifest.lock */,
 				D3507AC72A8BECC300DE95D1 /* Sources */,
 				D3507AC82A8BECC300DE95D1 /* Frameworks */,
 				D3507AC92A8BECC300DE95D1 /* Resources */,
+				E25C95EEC1066573C82D0434 /* [CP] Embed Pods Frameworks */,
+				D36FFBE42A8C110C002A144E /* Swift Gen */,
 			);
 			buildRules = (
 			);
@@ -234,6 +287,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = D3507AC22A8BECC300DE95D1;
 			productRefGroup = D3507ACC2A8BECC300DE95D1 /* Products */;
@@ -251,12 +305,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3507AEF2A8BEE6100DE95D1 /* newsViewController.xib in Resources */,
+				D36FFBDC2A8C0FC7002A144E /* Localizable.strings in Resources */,
 				D3507ADB2A8BECC500DE95D1 /* LaunchScreen.storyboard in Resources */,
 				D3507AD82A8BECC500DE95D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D36FFBE42A8C110C002A144E /* Swift Gen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Gen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Generated/GeneratedSwiftCode.swift\"\n\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n";
+		};
+		E25C95EEC1066573C82D0434 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kaber/Pods-Kaber-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kaber/Pods-Kaber-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kaber/Pods-Kaber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED0CBDD7490CF8EAFA82F318 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kaber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3507AC72A8BECC300DE95D1 /* Sources */ = {
@@ -266,6 +381,7 @@
 				D3507AFA2A8BEEC000DE95D1 /* Coordinator.swift in Sources */,
 				D3507ACF2A8BECC300DE95D1 /* AppDelegate.swift in Sources */,
 				D3507AFD2A8BEF3400DE95D1 /* UIViewController.swift in Sources */,
+				D36FFBE32A8C109B002A144E /* XCAssets+Generated.swift in Sources */,
 				D3507B002A8BEF3900DE95D1 /* screens.swift in Sources */,
 				D3507AF82A8BEEC000DE95D1 /* BaseCoordinator.swift in Sources */,
 				D3507AF42A8BEE9100DE95D1 /* newsCoordinator.swift in Sources */,
@@ -273,6 +389,7 @@
 				D3507AEE2A8BEE6100DE95D1 /* newsViewController.swift in Sources */,
 				D3507AF12A8BEE7B00DE95D1 /* newsViewModel.swift in Sources */,
 				D3507AF92A8BEEC000DE95D1 /* AppCoordinator.swift in Sources */,
+				D36FFBE22A8C109B002A144E /* Strings+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +404,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D36FFBDE2A8C0FC7002A144E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D36FFBDD2A8C0FC7002A144E /* en */,
+				D36FFBDF2A8C0FE5002A144E /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -294,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -354,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -406,6 +534,7 @@
 		};
 		D3507AE02A8BECC500DE95D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD821EE666081078D970DE36 /* Pods-Kaber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,6 +566,7 @@
 		};
 		D3507AE12A8BECC500DE95D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4C53C6585D49F4214356B3 /* Pods-Kaber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

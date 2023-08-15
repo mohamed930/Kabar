@@ -18,7 +18,7 @@ target 'Kaber' do
 
   pod 'ProgressHUD'
   
-  pod 'RealmSwift'
+  pod 'RealmSwift', '~>10'
   
   pod 'SwiftGen'
   
