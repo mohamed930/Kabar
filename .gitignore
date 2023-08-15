@@ -1,7 +1,7 @@
 # CocoaPods
 Podfile.lock
 Pods
-*.xcworkspace
+# *.xcworkspace
 ._*.*
 ._Podfile
 ._*
