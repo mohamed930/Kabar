@@ -23,8 +23,8 @@ extension UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Blinker" , size: 22)!]
     }
     
-    func openArticleOperaion(article: ArticleModel) {
-        if let url = URL(string: article.url) {
+    func openArticleOperaion(articleUrl: String) {
+        if let url = URL(string: articleUrl) {
             let config = SFSafariViewController.Configuration()
             config.entersReaderIfAvailable = true
 

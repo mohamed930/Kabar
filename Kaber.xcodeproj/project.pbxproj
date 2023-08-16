@@ -38,6 +38,12 @@
 		D36FFBFF2A8C2528002A144E /* Blinker-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF72A8C2528002A144E /* Blinker-ExtraLight.ttf */; };
 		D36FFC012A8C2897002A144E /* newsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFC002A8C2897002A144E /* newsResponse.swift */; };
 		D36FFC032A8C2EFD002A144E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFC022A8C2EFD002A144E /* UIImageView.swift */; };
+		D3ED87472A8D3F1600C13DE1 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED87452A8D3F1600C13DE1 /* TargetType.swift */; };
+		D3ED87482A8D3F1600C13DE1 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED87462A8D3F1600C13DE1 /* BaseAPI.swift */; };
+		D3ED874B2A8D3F2300C13DE1 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED874A2A8D3F2300C13DE1 /* ErrorMessage.swift */; };
+		D3ED874E2A8D3F4600C13DE1 /* constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED874D2A8D3F4600C13DE1 /* constans.swift */; };
+		D3ED87512A8D48EE00C13DE1 /* newsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED87502A8D48EE00C13DE1 /* newsNetworking.swift */; };
+		D3ED87532A8D4C9000C13DE1 /* newsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ED87522A8D4C9000C13DE1 /* newsAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +82,12 @@
 		D36FFBF72A8C2528002A144E /* Blinker-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraLight.ttf"; sourceTree = "<group>"; };
 		D36FFC002A8C2897002A144E /* newsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsResponse.swift; sourceTree = "<group>"; };
 		D36FFC022A8C2EFD002A144E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		D3ED87452A8D3F1600C13DE1 /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		D3ED87462A8D3F1600C13DE1 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		D3ED874A2A8D3F2300C13DE1 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		D3ED874D2A8D3F4600C13DE1 /* constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constans.swift; sourceTree = "<group>"; };
+		D3ED87502A8D48EE00C13DE1 /* newsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsNetworking.swift; sourceTree = "<group>"; };
+		D3ED87522A8D4C9000C13DE1 /* newsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsAPI.swift; sourceTree = "<group>"; };
 		FD821EE666081078D970DE36 /* Pods-Kaber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaber.debug.xcconfig"; path = "Target Support Files/Pods-Kaber/Pods-Kaber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +143,7 @@
 			children = (
 				D3507AE22A8BED6C00DE95D1 /* App Delegate */,
 				D3507AE52A8BEE1300DE95D1 /* Coordinator */,
+				D3ED87432A8D3C7200C13DE1 /* Network Layer */,
 				D36FFBD72A8C0DC1002A144E /* model */,
 				D3507AE32A8BED8700DE95D1 /* launch Screen */,
 				D3507AE62A8BEE1D00DE95D1 /* Flows */,
@@ -308,6 +321,43 @@
 			path = Blinker;
 			sourceTree = "<group>";
 		};
+		D3ED87432A8D3C7200C13DE1 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D3ED87442A8D3F1600C13DE1 /* Base */,
+				D3ED87492A8D3F2300C13DE1 /* Error */,
+				D3ED874F2A8D48DF00C13DE1 /* news */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		D3ED87442A8D3F1600C13DE1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D3ED874D2A8D3F4600C13DE1 /* constans.swift */,
+				D3ED87452A8D3F1600C13DE1 /* TargetType.swift */,
+				D3ED87462A8D3F1600C13DE1 /* BaseAPI.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D3ED87492A8D3F2300C13DE1 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D3ED874A2A8D3F2300C13DE1 /* ErrorMessage.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		D3ED874F2A8D48DF00C13DE1 /* news */ = {
+			isa = PBXGroup;
+			children = (
+				D3ED87502A8D48EE00C13DE1 /* newsNetworking.swift */,
+				D3ED87522A8D4C9000C13DE1 /* newsAPI.swift */,
+			);
+			path = news;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,7 +505,9 @@
 			files = (
 				D3507AFA2A8BEEC000DE95D1 /* Coordinator.swift in Sources */,
 				D3507ACF2A8BECC300DE95D1 /* AppDelegate.swift in Sources */,
+				D3ED87482A8D3F1600C13DE1 /* BaseAPI.swift in Sources */,
 				D3507AFD2A8BEF3400DE95D1 /* UIViewController.swift in Sources */,
+				D3ED87512A8D48EE00C13DE1 /* newsNetworking.swift in Sources */,
 				D36FFBE32A8C109B002A144E /* XCAssets+Generated.swift in Sources */,
 				D3507B002A8BEF3900DE95D1 /* screens.swift in Sources */,
 				D3507AF82A8BEEC000DE95D1 /* BaseCoordinator.swift in Sources */,
@@ -464,7 +516,11 @@
 				D36FFC012A8C2897002A144E /* newsResponse.swift in Sources */,
 				D3507AEE2A8BEE6100DE95D1 /* newsViewController.swift in Sources */,
 				D36FFBEC2A8C1FC2002A144E /* newsCell.swift in Sources */,
+				D3ED87532A8D4C9000C13DE1 /* newsAPI.swift in Sources */,
+				D3ED874B2A8D3F2300C13DE1 /* ErrorMessage.swift in Sources */,
+				D3ED874E2A8D3F4600C13DE1 /* constans.swift in Sources */,
 				D36FFBE82A8C1CC0002A144E /* UITextField.swift in Sources */,
+				D3ED87472A8D3F1600C13DE1 /* TargetType.swift in Sources */,
 				D3507AF12A8BEE7B00DE95D1 /* newsViewModel.swift in Sources */,
 				D3507AF92A8BEEC000DE95D1 /* AppCoordinator.swift in Sources */,
 				D36FFBE22A8C109B002A144E /* Strings+Generated.swift in Sources */,

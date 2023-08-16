@@ -33,6 +33,7 @@ class newsViewController: UIViewController {
         
         
         // Subscribe methods.
+        subscribeToIsLoadingBehaviour()
         
         
         // Action button methods.
@@ -73,7 +74,7 @@ class newsViewController: UIViewController {
             
             cell.readMoreButtonObservable.subscribe(onNext: { [unowned self] _ in
                 
-                openArticleOperaion(article: branch)
+                openArticleOperaion(articleUrl: branch.url)
             }).disposed(by: cell.disposebag)
             
         }.disposed(by: disposebag)
@@ -83,6 +84,20 @@ class newsViewController: UIViewController {
     
     // MARK: -  Methods that handle the Subscribe of variables in ViewModel Class.
     // -------------------------------------------
+    
+    func subscribeToIsLoadingBehaviour() {
+        newsviewmodel.isloadingBehaviour.subscribe(onNext: { [weak self] isloading in
+            guard let self = self else { return }
+            
+            if isloading {
+                showLoading()
+            }
+            else {
+                dismissLoading()
+            }
+            
+        }).disposed(by: disposebag)
+    }
     
     // -------------------------------------------
     
