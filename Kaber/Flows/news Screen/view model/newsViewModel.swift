@@ -49,9 +49,6 @@ class newsViewModel {
         newsBehaviour.accept(arr)
     }
     
-    func openArticleOperaion() {
-        
-    }
     
     private func dateFromString(_ isoDate: String) -> Date{
         let dateFormatter = ISO8601DateFormatter()

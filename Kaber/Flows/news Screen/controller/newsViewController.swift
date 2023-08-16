@@ -73,7 +73,7 @@ class newsViewController: UIViewController {
             
             cell.readMoreButtonObservable.subscribe(onNext: { [unowned self] _ in
                 
-                newsviewmodel.openArticleOperaion()
+                openArticleOperaion(article: branch)
             }).disposed(by: cell.disposebag)
             
         }.disposed(by: disposebag)

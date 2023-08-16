@@ -7,6 +7,7 @@
 
 import UIKit
 import ProgressHUD
+import SafariServices
 
 extension UIViewController {
     
@@ -20,5 +21,15 @@ extension UIViewController {
     
     func changeFontForNavigationController() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Blinker" , size: 22)!]
+    }
+    
+    func openArticleOperaion(article: ArticleModel) {
+        if let url = URL(string: article.url) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
     }
 }
