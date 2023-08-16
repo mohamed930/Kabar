@@ -315,8 +315,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3507ADF2A8BECC500DE95D1 /* Build configuration list for PBXNativeTarget "Kaber" */;
 			buildPhases = (
-				D36FFBE42A8C110C002A144E /* Swift Gen */,
 				ED0CBDD7490CF8EAFA82F318 /* [CP] Check Pods Manifest.lock */,
+				D36FFBE42A8C110C002A144E /* Swift Gen */,
 				D3507AC72A8BECC300DE95D1 /* Sources */,
 				D3507AC82A8BECC300DE95D1 /* Frameworks */,
 				D3507AC92A8BECC300DE95D1 /* Resources */,

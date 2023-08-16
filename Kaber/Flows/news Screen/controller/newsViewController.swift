@@ -50,7 +50,8 @@ class newsViewController: UIViewController {
         self.changeFontForNavigationController()
         searchTextField.setLeftPaddingPoints(paddingValue)
         searchTextField.setRightPaddingPoints(paddingValue)
-        searchTextField.placeholder = myStrings.search
+        searchTextField.attributedPlaceholder =
+        NSAttributedString(string: myStrings.search, attributes: [NSAttributedString.Key.foregroundColor: images.bodyTextGrayScale.color])
     }
     
     func regesterTableView() {
