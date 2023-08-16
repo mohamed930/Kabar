@@ -36,7 +36,7 @@ class newsCell: UITableViewCell {
         articleAuthorLabel.text = model.author ?? "unknown"
         descriptionLabel.text   = model.description
         
-        let hours = hoursDifference(from: model.publishedAt)
+        let hours = hoursDifference(from: dateFromString(model.publishedAt))
         if hours >= 24 {
             publishDateLabel.text   = "\(hours/24)d"
         }
@@ -51,6 +51,13 @@ class newsCell: UITableViewCell {
             
             articleImageView.loadImageFromServer(imageUrl)
         }
+    }
+    
+    private func dateFromString(_ isoDate: String) -> Date{
+        let dateFormatter = ISO8601DateFormatter()
+        let date = dateFormatter.date(from:isoDate)!
+        
+        return date
     }
     
     

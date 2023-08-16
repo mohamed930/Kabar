@@ -40,12 +40,4 @@ class newsViewModel {
             }
         }
     }
-    
-    
-//    private func dateFromString(_ isoDate: String) -> Date{
-//        let dateFormatter = ISO8601DateFormatter()
-//        let date = dateFormatter.date(from:isoDate)!
-//        
-//        return date
-//    }
 }

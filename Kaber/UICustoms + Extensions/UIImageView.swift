@@ -11,14 +11,14 @@ import Kingfisher
 extension UIImageView {
     
     var placeholderImage: String {
-        return images.articleImage.name
+        return images.loadingImage.name
     }
     
     var errorInConnection: String {
-        return images.articleImage.name
+        return images.loadingImage.name
     }
     
-    func loadImageFromServer(_ url: String, placeHolderName: String = images.articleImage.name) {
+    func loadImageFromServer(_ url: String, placeHolderName: String = images.loadingImage.name) {
         guard let url = URL(string: url) else { return }
         
         KF.url(url)

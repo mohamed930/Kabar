@@ -35,6 +35,7 @@ internal enum images {
   internal static let articleImage = ImageAsset(name: "articleImage")
   internal static let homeScreenLogo = ImageAsset(name: "homeScreenLogo")
   internal static let kaberLauncScreen = ImageAsset(name: "kaberLauncScreen")
+  internal static let loadingImage = ImageAsset(name: "loading image")
   internal static let searchIcon = ImageAsset(name: "searchIcon")
   internal static let time = ImageAsset(name: "time")
 }
