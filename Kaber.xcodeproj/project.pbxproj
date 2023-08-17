@@ -37,6 +37,8 @@
 		D36FFBFF2A8C2528002A144E /* Blinker-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36FFBF72A8C2528002A144E /* Blinker-ExtraLight.ttf */; };
 		D36FFC012A8C2897002A144E /* newsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFC002A8C2897002A144E /* newsResponse.swift */; };
 		D36FFC032A8C2EFD002A144E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FFC022A8C2EFD002A144E /* UIImageView.swift */; };
+		D39D2D2D2A8E967900BD9BDF /* offlineArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D2D2C2A8E967900BD9BDF /* offlineArticleModel.swift */; };
+		D39D2D2F2A8E97AA00BD9BDF /* RealmSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D2D2E2A8E97AA00BD9BDF /* RealmSwift.swift */; };
 		D3B9D1612A8E2983006D70FB /* newsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9D15F2A8E2983006D70FB /* newsDetailsViewController.swift */; };
 		D3B9D1642A8E299E006D70FB /* newsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9D1632A8E299E006D70FB /* newsDetailsViewModel.swift */; };
 		D3B9D1662A8E29B1006D70FB /* newsDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9D1652A8E29B1006D70FB /* newsDetailsCoordinator.swift */; };
@@ -94,6 +96,8 @@
 		D36FFBF72A8C2528002A144E /* Blinker-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-ExtraLight.ttf"; sourceTree = "<group>"; };
 		D36FFC002A8C2897002A144E /* newsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsResponse.swift; sourceTree = "<group>"; };
 		D36FFC022A8C2EFD002A144E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		D39D2D2C2A8E967900BD9BDF /* offlineArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offlineArticleModel.swift; sourceTree = "<group>"; };
+		D39D2D2E2A8E97AA00BD9BDF /* RealmSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwift.swift; sourceTree = "<group>"; };
 		D3B9D15F2A8E2983006D70FB /* newsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsDetailsViewController.swift; sourceTree = "<group>"; };
 		D3B9D1632A8E299E006D70FB /* newsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsDetailsViewModel.swift; sourceTree = "<group>"; };
 		D3B9D1652A8E29B1006D70FB /* newsDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsDetailsCoordinator.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				D3B9D1692A8E32DA006D70FB /* Date.swift */,
 				D3B9D17B2A8E4737006D70FB /* UIView.swift */,
 				D3B9D1A52A8E4F53006D70FB /* LocalStorage.swift */,
+				D39D2D2E2A8E97AA00BD9BDF /* RealmSwift.swift */,
 			);
 			path = "UICustoms + Extensions";
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				D36FFC002A8C2897002A144E /* newsResponse.swift */,
+				D39D2D2C2A8E967900BD9BDF /* offlineArticleModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -652,6 +658,7 @@
 				D3507AEE2A8BEE6100DE95D1 /* newsViewController.swift in Sources */,
 				D3B9D1612A8E2983006D70FB /* newsDetailsViewController.swift in Sources */,
 				D3B9D17C2A8E4737006D70FB /* UIView.swift in Sources */,
+				D39D2D2F2A8E97AA00BD9BDF /* RealmSwift.swift in Sources */,
 				D36FFBEC2A8C1FC2002A144E /* newsCell.swift in Sources */,
 				D3B9D1762A8E453F006D70FB /* chooceLanguageModel.swift in Sources */,
 				D3ED87532A8D4C9000C13DE1 /* newsAPI.swift in Sources */,
@@ -664,6 +671,7 @@
 				D3B9D1712A8E4249006D70FB /* languageViewController.swift in Sources */,
 				D3507AF92A8BEEC000DE95D1 /* AppCoordinator.swift in Sources */,
 				D3B9D1A62A8E4F53006D70FB /* LocalStorage.swift in Sources */,
+				D39D2D2D2A8E967900BD9BDF /* offlineArticleModel.swift in Sources */,
 				D36FFBE22A8C109B002A144E /* Strings+Generated.swift in Sources */,
 				D3B9D1662A8E29B1006D70FB /* newsDetailsCoordinator.swift in Sources */,
 				D3B9D16A2A8E32DA006D70FB /* Date.swift in Sources */,

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Blinker-Regular.ttf">
+            <string>Blinker-Regular</string>
+        </array>
+        <array key="Blinker-SemiBold.ttf">
+            <string>Blinker-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="languageViewController" customModule="Kaber" customModuleProvider="target">
+            <connections>
+                <outlet property="arabicRadioButton" destination="1Ia-UB-XYu" id="BEl-x4-mnl"/>
+                <outlet property="arabicView" destination="N2e-Di-5ri" id="DQM-WI-Q5z"/>
+                <outlet property="englishRadioButton" destination="QXb-Jp-Lln" id="r0n-uM-plq"/>
+                <outlet property="englishView" destination="MPs-ap-m9O" id="8wF-EG-bWg"/>
+                <outlet property="nextButton" destination="BCs-J9-QP2" id="a1s-4d-E0L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Vri-NL-DC9">
+                    <rect key="frame" x="26" y="108" width="215" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chooce Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3a-i9-YaB">
+                            <rect key="frame" x="0.0" y="0.0" width="215" height="28"/>
+                            <fontDescription key="fontDescription" name="Blinker-SemiBold" family="Blinker" pointSize="26"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please pick your perefernce language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71G-qI-6Ma">
+                            <rect key="frame" x="0.0" y="32" width="215" height="28"/>
+                            <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="14"/>
+                            <color key="textColor" name="Body Text - GrayScale"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="nVJ-EC-iwZ"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="kaN-NJ-dpa">
+                    <rect key="frame" x="26" y="224" width="362" height="137"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2e-Di-5ri">
+                            <rect key="frame" x="0.0" y="0.0" width="362" height="56"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ia-UB-XYu">
+                                    <rect key="frame" x="14" y="17" width="20" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="aUi-ow-ef3"/>
+                                        <constraint firstAttribute="height" constant="22" id="iXC-hu-a46"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="off"/>
+                                    <state key="selected" image="on"/>
+                                    <connections>
+                                        <action selector="radioButtonSelected:" destination="-1" eventType="touchUpInside" id="YbM-Jo-b7Q"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العربية" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8m-Og-pHa">
+                                    <rect key="frame" x="50" y="18.5" width="36.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="Color - Background Screen"/>
+                            <constraints>
+                                <constraint firstItem="1Ia-UB-XYu" firstAttribute="centerY" secondItem="N2e-Di-5ri" secondAttribute="centerY" id="3eW-Lw-tCa"/>
+                                <constraint firstItem="S8m-Og-pHa" firstAttribute="centerY" secondItem="1Ia-UB-XYu" secondAttribute="centerY" id="hHh-oZ-7Um"/>
+                                <constraint firstItem="S8m-Og-pHa" firstAttribute="leading" secondItem="1Ia-UB-XYu" secondAttribute="trailing" constant="16" id="i44-eV-arb"/>
+                                <constraint firstItem="1Ia-UB-XYu" firstAttribute="leading" secondItem="N2e-Di-5ri" secondAttribute="leading" constant="14" id="oer-ho-pyg"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S8m-Og-pHa" secondAttribute="trailing" constant="16" id="sja-d0-r0H"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="BorderColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPs-ap-m9O">
+                            <rect key="frame" x="0.0" y="81" width="362" height="56"/>
+                            <subviews>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-Jp-Lln">
+                                    <rect key="frame" x="16" y="17" width="20" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="sfY-Zv-Ct2"/>
+                                        <constraint firstAttribute="width" constant="20" id="wTA-Xc-hwN"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="off"/>
+                                    <state key="selected" image="on"/>
+                                    <connections>
+                                        <action selector="radioButtonSelected:" destination="-1" eventType="touchUpInside" id="QNq-d0-Gjk"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWI-63-TOo">
+                                    <rect key="frame" x="52" y="18.5" width="49" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="Color - Background Screen"/>
+                            <constraints>
+                                <constraint firstItem="QXb-Jp-Lln" firstAttribute="leading" secondItem="MPs-ap-m9O" secondAttribute="leading" constant="16" id="Awc-lu-tmt"/>
+                                <constraint firstItem="RWI-63-TOo" firstAttribute="centerY" secondItem="QXb-Jp-Lln" secondAttribute="centerY" id="GM0-aJ-NFm"/>
+                                <constraint firstItem="RWI-63-TOo" firstAttribute="leading" secondItem="QXb-Jp-Lln" secondAttribute="trailing" constant="16" id="dB6-85-x4K"/>
+                                <constraint firstItem="QXb-Jp-Lln" firstAttribute="centerY" secondItem="MPs-ap-m9O" secondAttribute="centerY" id="yc8-3g-O3b"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="BorderColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="137" id="fNg-NO-fDG"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCs-J9-QP2">
+                    <rect key="frame" x="26" y="798" width="362" height="48"/>
+                    <color key="backgroundColor" name="Primary - default"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="8Zp-sa-72F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Blinker-Regular" family="Blinker" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" name="button font"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="border">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Color - Background Screen"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BCs-J9-QP2" secondAttribute="bottom" constant="16" id="0O9-0X-zvC"/>
+                <constraint firstItem="BCs-J9-QP2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="252-rr-f5N"/>
+                <constraint firstItem="Vri-NL-DC9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="8BC-Cc-igX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kaN-NJ-dpa" secondAttribute="trailing" constant="26" id="DHQ-aa-IGF"/>
+                <constraint firstItem="kaN-NJ-dpa" firstAttribute="top" secondItem="Vri-NL-DC9" secondAttribute="bottom" constant="56" id="QlI-zd-taH"/>
+                <constraint firstItem="Vri-NL-DC9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="XQv-c1-V4E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BCs-J9-QP2" secondAttribute="trailing" constant="26" id="XUX-UR-0r2"/>
+                <constraint firstItem="kaN-NJ-dpa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="eVe-9o-OiW"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="off" width="20" height="20"/>
+        <image name="on" width="20" height="20"/>
+        <namedColor name="Body Text - GrayScale">
+            <color red="0.62699997425079346" green="0.63899999856948853" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BorderColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color - Background Screen">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary - default">
+            <color red="0.093999996781349182" green="0.46700000762939453" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button font">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
