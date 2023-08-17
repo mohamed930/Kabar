@@ -57,9 +57,8 @@ class newsViewModel {
         
         // If there are already 50 articles, delete the oldest ones
        if existingArticleCount >= 50 {
-           let articlesToDelete = Array(exsistingArticles.prefix(existingArticleCount - 49)) // Keep the latest 49 articles
            try! realm.write {
-               realm.delete(articlesToDelete)
+               realm.deleteAll()
            }
        }
         
@@ -73,9 +72,16 @@ class newsViewModel {
             article.url                 = i.url
             article.publishedAt         = i.publishedAt
             article.content             = i.content
+            article.urlToImage      = nil
             
             if let imageUrl = i.urlToImage {
-                saveImageToRealm(from: URL(string: imageUrl)!) { [weak self] img, error in
+                guard let urlToImage = URL(string: imageUrl) else {
+                    article.urlToImage = nil
+                    saveToRealm(model: article)
+                    return
+                }
+                
+                saveImageToRealm(from: urlToImage) { [weak self] img, error in
                     guard let self = self else { return }
                     if let img = img {
                         article.urlToImage  = img
@@ -109,5 +115,30 @@ class newsViewModel {
                 break
             }
         }
+    }
+    
+    
+    func loadArticlesFromRealmSwiftOperaiton() {
+        let storage: RealmSwiftProtocol = RealmSwift()
+        
+        let articles: [offlineArticleModel] = storage.objects()
+        
+        var articlesArr = Array<ArticleModel>()
+        for i in articles {
+            let article = ArticleModel(connection: false,
+                                       source: SourceModel(id: "", name: i.source ?? "Unkown"),
+                                       author: i.author,
+                                       title: i.title,
+                                       description: i.artilceDescription,
+                                       url: i.url,
+                                       urlToImage: "",
+                                       urlToImageData: i.urlToImage,
+                                       publishedAt: i.publishedAt,
+                                       content: i.content)
+            
+            articlesArr.append(article)
+        }
+        
+        newsBehaviour.accept(articlesArr)
     }
 }

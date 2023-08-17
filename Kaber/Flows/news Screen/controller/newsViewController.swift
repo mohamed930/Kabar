@@ -14,7 +14,7 @@ class newsViewController: UIViewController {
     // MARK:  - IBOutlets Here:
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-       
+    @IBOutlet weak var connectionBannerView:UIView!
        
     // MARK: - variables Here:
     var newsviewmodel: newsViewModel!
@@ -34,6 +34,7 @@ class newsViewController: UIViewController {
         
         
         // Subscribe methods.
+        subscribeToInterConnectionRestore()
         subscribeToIsLoadingBehaviour()
         subscribeToSelectArticleTableView()
         
@@ -42,7 +43,6 @@ class newsViewController: UIViewController {
         
         
         // Assits method.
-        fetchArticlesFromServer()
     }
     
     // MARK:  - Methods that handle UI Element in UI.
@@ -89,6 +89,51 @@ class newsViewController: UIViewController {
     // MARK: -  Methods that handle the Subscribe of variables in ViewModel Class.
     // -------------------------------------------
     
+    func subscribeToInterConnectionRestore() {
+        let netowrk = NetworkManagerReachability()
+        
+        NetworkManagerReachability.sharedInstance.connectionBehaviour.asObservable().subscribe(onNext: { [weak self] isConnected in
+            guard let self = self else { return }
+
+            print(isConnected)
+            
+            NetworkManagerReachability.sharedInstance.reachability.whenReachable = { _ in
+                NetworkManagerReachability.sharedInstance.connectionBehaviour.accept(true)
+            }
+            
+            NetworkManagerReachability.sharedInstance.reachability.whenUnreachable = { _ in
+                NetworkManagerReachability.sharedInstance.connectionBehaviour.accept(false)
+            }
+
+            if isConnected == true {
+                // Connection is available
+                print("Connected to the internet")
+                connectionBannerView.isHidden = true
+                fetchArticlesFromServer()
+
+            } else {
+                // No connection
+                print("No internet connection")
+                connectionBannerView.isHidden = false
+                fetchArticlesFromLocalStorage()
+            }
+        }).disposed(by: disposebag)
+        
+//        NetworkManagerReachability.openNotifier()
+        
+//        let network = NetworkManagerReachability()
+//
+//        network.isReachable { [unowned self] _ in
+//            connectionBannerView.isHidden = true
+//            fetchArticlesFromServer()
+//        }
+//
+//        network.isUnreachable { [unowned self] _ in
+//            connectionBannerView.isHidden = false
+//            fetchArticlesFromLocalStorage()
+//        }
+    }
+    
     func subscribeToIsLoadingBehaviour() {
         newsviewmodel.isloadingBehaviour.subscribe(onNext: { [weak self] isloading in
             guard let self = self else { return }
@@ -126,6 +171,10 @@ class newsViewController: UIViewController {
     
     func fetchArticlesFromServer() {
         newsviewmodel.fetchNewsOperation()
+    }
+    
+    func fetchArticlesFromLocalStorage() {
+        newsviewmodel.loadArticlesFromRealmSwiftOperaiton()
     }
     
     // -------------------------------------------

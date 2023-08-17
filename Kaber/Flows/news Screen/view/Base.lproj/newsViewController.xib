@@ -12,10 +12,14 @@
         <array key="Blinker-Regular.ttf">
             <string>Blinker-Regular</string>
         </array>
+        <array key="Blinker-SemiBold.ttf">
+            <string>Blinker-SemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newsViewController" customModule="Kaber" customModuleProvider="target">
             <connections>
+                <outlet property="connectionBannerView" destination="eSG-Vu-2XR" id="hQR-Ln-e0L"/>
                 <outlet property="searchTextField" destination="2Ri-ON-y2l" id="Bs0-Kl-4Ut"/>
                 <outlet property="tableView" destination="ydZ-es-fyq" id="gEU-sh-PRY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -64,6 +68,44 @@
                     <rect key="frame" x="24" y="190" width="345" height="614"/>
                     <color key="backgroundColor" name="Color - Background Screen"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSG-Vu-2XR">
+                    <rect key="frame" x="24" y="756" width="345" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="there is no connection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ll2-Fn-9Tu">
+                            <rect key="frame" x="52" y="15.666666666666629" width="129.33333333333334" height="17"/>
+                            <fontDescription key="fontDescription" name="Blinker-SemiBold" family="Blinker" pointSize="14"/>
+                            <color key="textColor" name="Error Dark"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertImage" translatesAutoresizingMaskIntoConstraints="NO" id="E8v-bg-RIz">
+                            <rect key="frame" x="12" y="12" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="GX4-TR-1rP"/>
+                                <constraint firstAttribute="width" constant="24" id="f3G-ee-SrL"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" name="Error - BackGround"/>
+                    <constraints>
+                        <constraint firstItem="E8v-bg-RIz" firstAttribute="centerY" secondItem="eSG-Vu-2XR" secondAttribute="centerY" id="9JF-vv-yFX"/>
+                        <constraint firstItem="ll2-Fn-9Tu" firstAttribute="leading" secondItem="E8v-bg-RIz" secondAttribute="trailing" constant="16" id="ErZ-9M-7wu"/>
+                        <constraint firstItem="E8v-bg-RIz" firstAttribute="leading" secondItem="eSG-Vu-2XR" secondAttribute="leading" constant="12" id="WNM-n3-DhP"/>
+                        <constraint firstItem="ll2-Fn-9Tu" firstAttribute="centerY" secondItem="E8v-bg-RIz" secondAttribute="centerY" id="gzP-s9-5FN"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ll2-Fn-9Tu" secondAttribute="trailing" constant="16" id="tKH-bU-kYm"/>
+                        <constraint firstAttribute="height" constant="48" id="wh2-dd-CzM"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="border">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="Error - BorderColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="Color - Background Screen"/>
@@ -72,7 +114,10 @@
                 <constraint firstItem="5YY-Qk-nQm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="0xZ-SG-le0"/>
                 <constraint firstItem="fxQ-K5-NVm" firstAttribute="leading" secondItem="2Ri-ON-y2l" secondAttribute="leading" constant="12" id="Adj-NM-6bI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ydZ-es-fyq" secondAttribute="bottom" constant="14" id="B7K-e5-pA2"/>
+                <constraint firstItem="eSG-Vu-2XR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="E6L-JD-gYH"/>
                 <constraint firstItem="2Ri-ON-y2l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="FMf-Db-Hhf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eSG-Vu-2XR" secondAttribute="bottom" constant="14" id="Nmn-o4-Ll9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eSG-Vu-2XR" secondAttribute="trailing" constant="24" id="OGy-FK-Hyy"/>
                 <constraint firstItem="5YY-Qk-nQm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Srp-ix-Elc"/>
                 <constraint firstItem="fxQ-K5-NVm" firstAttribute="centerY" secondItem="2Ri-ON-y2l" secondAttribute="centerY" id="Z3a-fj-Shw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Ri-ON-y2l" secondAttribute="trailing" constant="24" id="dfp-Vd-Bhy"/>
@@ -84,16 +129,26 @@
         </view>
     </objects>
     <resources>
+        <image name="alertImage" width="72" height="72"/>
         <image name="homeScreenLogo" width="297" height="90"/>
         <image name="searchIcon" width="61" height="61"/>
         <namedColor name="Body - BorderColor">
-            <color red="0.30588235294117649" green="0.29411764705882354" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.3059999942779541" green="0.29399999976158142" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color - Background Screen">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color - SearchTextField">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Error - BackGround">
+            <color red="1" green="0.95294117647058818" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Error - BorderColor">
+            <color red="1" green="0.51764705882352935" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Error Dark">
+            <color red="0.76470588235294112" green="0.0" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

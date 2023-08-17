@@ -15,12 +15,14 @@ struct newsResponse: Codable {
 
 // MARK: - Article
 struct ArticleModel: Codable {
+    let connection: Bool?
     let source: SourceModel
     let author: String?
     let title: String
     let description: String?
     let url: String
     let urlToImage: String?
+    let urlToImageData: Data?
     let publishedAt: String
     let content: String
 }

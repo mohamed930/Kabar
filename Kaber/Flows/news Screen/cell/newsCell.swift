@@ -45,12 +45,24 @@ class newsCell: UITableViewCell {
             publishDateLabel.text   = "\(hours)h"
         }
         
-        guard let imageUrl = model.urlToImage else { return }
-         
-        DispatchQueue.main.async { [weak self]  in
-            guard let self = self else { return }
+        if model.connection != nil {
+            guard let data = model.urlToImageData else {
+                articleImageView.image = images.loadingImage.image
+                return
+            }
             
-            articleImageView.loadImageFromServer(imageUrl)
+            articleImageView.image = UIImage(data: data)
         }
+        else {
+            guard let imageUrl = model.urlToImage else { return }
+            
+            DispatchQueue.main.async { [weak self]  in
+                guard let self = self else { return }
+                
+                articleImageView.loadImageFromServer(imageUrl)
+            }
+        }
+         
+        
     }
 }
