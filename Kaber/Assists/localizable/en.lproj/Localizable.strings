@@ -10,3 +10,7 @@
 "pleaseWait"    = "Please wait";
 "search"        = "Search";
 "details"       = "Article Details";
+"readMore"      = "read More";
+"Attension"     = "Attension";
+"langMess"      = "you must restart app to change language?";
+"restart"       = "restart";

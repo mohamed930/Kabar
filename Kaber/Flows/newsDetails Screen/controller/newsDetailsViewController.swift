@@ -50,6 +50,9 @@ class newsDetailsViewController: UIViewController {
     
     func configureUI() {
         navigationItem.title = myStrings.details
+        navigationController?.isNavigationBarHidden = false
+        
+        readMoreButton.setTitle(myStrings.readMore, for: .normal)
         
         // Create a custom view to hold the button
         let customView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44)) // You can adjust the size as needed

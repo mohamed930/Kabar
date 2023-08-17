@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "please pick your perefernce language"; ObjectID = "71G-qI-6Ma"; */
+"71G-qI-6Ma.text" = "من فضلك ادخل لغتك المفضلة";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "BCs-J9-QP2"; */
+"BCs-J9-QP2.normalTitle" = "التالى";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "RWI-63-TOo"; */
+"RWI-63-TOo.text" = "English";
+
+/* Class = "UILabel"; text = "العربية"; ObjectID = "S8m-Og-pHa"; */
+"S8m-Og-pHa.text" = "العربية";
+
+/* Class = "UILabel"; text = "Chooce Language"; ObjectID = "o3a-i9-YaB"; */
+"o3a-i9-YaB.text" = "اختر اللغه";

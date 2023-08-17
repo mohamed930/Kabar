@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import MOLH
 
 class newsViewController: UIViewController {
 
@@ -48,6 +49,8 @@ class newsViewController: UIViewController {
     // -------------------------------------------
     
     func configureUI() {
+        navigationController?.isNavigationBarHidden = false
+//        navigationItem.title = MOLHLanguage.currentAppleLanguage() == "en" ? "news" : "الاخبار"
         navigationItem.title = myStrings.news
         self.changeFontForNavigationController()
         searchTextField.setLeftPaddingPoints(paddingValue)

@@ -8,6 +8,7 @@
 import Foundation
 
 enum screens: String {
+    case languageViewController
     case newsViewController
     case newsDetailsViewController
 }

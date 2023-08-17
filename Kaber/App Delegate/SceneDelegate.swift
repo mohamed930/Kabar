@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import MOLH
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate { // , MOLHResetable {
 
     var window: UIWindow?
 
@@ -18,7 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScence)
                         
         AppCoordinator(window: self.window!).start()
+        
+//        MOLH.shared.activate(true)
     }
+    
+//    func reset() {
+//        
+//        AppCoordinator.shared.restart()
+//    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
