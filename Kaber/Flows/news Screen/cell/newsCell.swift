@@ -36,7 +36,8 @@ class newsCell: UITableViewCell {
         articleAuthorLabel.text = model.author ?? "unknown"
         descriptionLabel.text   = model.description
         
-        let hours = hoursDifference(from: dateFromString(model.publishedAt))
+        let publishAtDate = model.publishedAt.dateFromString()
+        let hours = publishAtDate.hoursDifference()
         if hours >= 24 {
             publishDateLabel.text   = "\(hours/24)d"
         }
@@ -51,24 +52,5 @@ class newsCell: UITableViewCell {
             
             articleImageView.loadImageFromServer(imageUrl)
         }
-    }
-    
-    private func dateFromString(_ isoDate: String) -> Date{
-        let dateFormatter = ISO8601DateFormatter()
-        let date = dateFormatter.date(from:isoDate)!
-        
-        return date
-    }
-    
-    
-    func hoursDifference(from date: Date) -> Int {
-        let currentDate = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.hour], from: date, to: currentDate)
-        
-        if let hours = components.hour {
-            return hours
-        }
-        return 0 // Default value in case of an issue
     }
 }

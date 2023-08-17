@@ -9,4 +9,5 @@ import Foundation
 
 enum screens: String {
     case newsViewController
+    case newsDetailsViewController
 }

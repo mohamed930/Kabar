@@ -28,6 +28,7 @@ internal enum images {
   internal static let bodyBorderColor = ColorAsset(name: "Body - BorderColor")
   internal static let bodyTextGrayScale = ColorAsset(name: "Body Text - GrayScale")
   internal static let colorBackgroundScreen = ColorAsset(name: "Color - Background Screen")
+  internal static let colorBodyArticleTitle = ColorAsset(name: "Color - Body Article Title")
   internal static let colorSearchTextField = ColorAsset(name: "Color - SearchTextField")
   internal static let primaryDefault = ColorAsset(name: "Primary - default")
   internal static let buttonFont = ColorAsset(name: "button font")
@@ -37,6 +38,7 @@ internal enum images {
   internal static let kaberLauncScreen = ImageAsset(name: "kaberLauncScreen")
   internal static let loadingImage = ImageAsset(name: "loading image")
   internal static let searchIcon = ImageAsset(name: "searchIcon")
+  internal static let share = ImageAsset(name: "share")
   internal static let time = ImageAsset(name: "time")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

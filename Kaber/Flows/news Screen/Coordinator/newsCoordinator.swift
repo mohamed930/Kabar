@@ -22,4 +22,10 @@ class newsCoordinator: BaseCoordinator {
         viewController.newsviewmodel = viewmodel
         navigationController.setViewControllers([viewController], animated: true)
     }
+    
+    func moveToArticleDetails(article: ArticleModel) {
+        let coordinator = newsDetailsCoordinator(navigationController: navigationController, article: article)
+        add(coordinator: coordinator)
+        coordinator.start()
+    }
 }

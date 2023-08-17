@@ -20,6 +20,9 @@ class newsViewModel {
         return newsBehaviour.asObservable()
     }
     
+    func moveToNewsDetailsOperation(article: ArticleModel) {
+        coordinator.moveToArticleDetails(article: article)
+    }
     
     func fetchNewsOperation() {
         isloadingBehaviour.accept(true)

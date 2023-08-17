@@ -135,6 +135,7 @@ The Deniliquin structure, hidden deep within the earth in the</string>
                             <constraint firstItem="bdS-df-CTA" firstAttribute="top" secondItem="6yG-gQ-d3f" secondAttribute="bottom" constant="16" id="fbm-7W-87V"/>
                             <constraint firstItem="IXy-bg-zze" firstAttribute="trailing" secondItem="78U-v7-kLf" secondAttribute="trailing" id="g9A-yW-cxt"/>
                             <constraint firstItem="lns-2D-ot1" firstAttribute="leading" secondItem="78U-v7-kLf" secondAttribute="leading" id="gtB-Ry-Roo"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hMc-Ng-7bM" secondAttribute="trailing" constant="8" id="ng8-DS-0I7"/>
                             <constraint firstItem="bdS-df-CTA" firstAttribute="trailing" secondItem="78U-v7-kLf" secondAttribute="trailing" id="qcY-uY-Bbj"/>
                             <constraint firstItem="CWb-Jk-Bsh" firstAttribute="top" secondItem="lns-2D-ot1" secondAttribute="bottom" constant="4" id="sn4-cS-vxy"/>
                             <constraint firstItem="bdS-df-CTA" firstAttribute="leading" secondItem="78U-v7-kLf" secondAttribute="leading" id="vNr-lq-LC7"/>
@@ -170,13 +171,13 @@ The Deniliquin structure, hidden deep within the earth in the</string>
         <image name="articleImage" width="341" height="172"/>
         <image name="time" width="36" height="36"/>
         <namedColor name="Body Text - GrayScale">
-            <color red="0.62745098039215685" green="0.63921568627450975" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.62699997425079346" green="0.63899999856948853" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color - Background Screen">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Primary - default">
-            <color red="0.094117647058823528" green="0.46666666666666667" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.093999996781349182" green="0.46700000762939453" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="button font">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

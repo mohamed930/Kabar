@@ -34,6 +34,7 @@ class newsViewController: UIViewController {
         
         // Subscribe methods.
         subscribeToIsLoadingBehaviour()
+        subscribeToSelectArticleTableView()
         
         
         // Action button methods.
@@ -97,6 +98,17 @@ class newsViewController: UIViewController {
             }
             
         }).disposed(by: disposebag)
+    }
+    
+    func subscribeToSelectArticleTableView() {
+        Observable.zip(tableView.rx.itemSelected, tableView.rx.modelSelected(ArticleModel.self).throttle(.milliseconds(500), scheduler: MainScheduler.instance))
+           .bind { [weak self] selectedIndex, branch in
+
+           guard let self = self else { return }
+               
+           newsviewmodel.moveToNewsDetailsOperation(article: branch)
+               
+       }.disposed(by: disposebag)
     }
     
     // -------------------------------------------
