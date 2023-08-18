@@ -9,10 +9,31 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Kingfisher
+import MOLH
 
 class newsViewModel {
     var coordinator: newsCoordinator!
     let newsapi = newsAPI()
+    
+    var searchTextFieldBehaviourRelay = BehaviorRelay<String>(value: "")
+    
+    var placeHolderBehaviourRelay = BehaviorRelay<Bool>(value: true)
+    
+    var filteredObservable: Observable<Bool> {
+        searchTextFieldBehaviourRelay.asObservable().scan(0) { count, text in
+            return text.count
+        }
+        .map { count in
+            return (count >= 5 && count % 5 == 0) || (count >= 10 && (count - 10) % 5 == 0)
+        }
+    }
+    
+    var searchedIndex = 1
+    
+    private var SearchednewsBehaviour = BehaviorRelay<[ArticleModel]>(value: [])
+    var SearchednewsObervable: Observable<[ArticleModel]> {
+        return SearchednewsBehaviour.asObservable()
+    }
     
     var pagaignLoadingBehaviour = BehaviorRelay<Bool>(value: false)
     var currentPage: Int = 1
@@ -31,7 +52,7 @@ class newsViewModel {
     func fetchNewsOperation() {
         isloadingBehaviour.accept(true)
         
-        newsapi.fetchAllArticles(q: "*", page: 1) { [weak self] response in
+        newsapi.fetchAllArticles(q: "*", page: 1,language: MOLHLanguage.currentAppleLanguage()) { [weak self] response in
             guard let self = self else { return }
             isloadingBehaviour.accept(false)
             
@@ -44,7 +65,6 @@ class newsViewModel {
                 cacheTheArticleOffline()
                 
             case .failure(let error):
-//                let e = error.userInfo[NSLocalizedDescriptionKey] as? String ?? ""
                 print(error.message)
             }
         }
@@ -150,7 +170,7 @@ class newsViewModel {
     func fetchNextPageOperation() {
         pagaignLoadingBehaviour.accept(true)
         
-        newsapi.fetchAllArticles(q: "*", page: currentPage) { [weak self] response in
+        newsapi.fetchAllArticles(q: "*", page: currentPage,language: MOLHLanguage.currentAppleLanguage()) { [weak self] response in
             guard let self = self else { return }
             pagaignLoadingBehaviour.accept(false)
             
@@ -168,6 +188,36 @@ class newsViewModel {
                 
             case .failure(let error):
                 pagaignLoadingBehaviour.accept(false)
+                print(error.message)
+            }
+        }
+    }
+    
+    
+    func clearSearchResult() {
+        SearchednewsBehaviour.accept([])
+    }
+    
+    func searchArticleOperation() {
+        newsapi.fetchAllArticles(q: searchTextFieldBehaviourRelay.value, page: searchedIndex, language: "") { [weak self] response in
+            guard let self = self else { return }
+            
+            switch response {
+                
+            case .success(let model):
+                guard let model = model else { return }
+                
+                if model.articles.isEmpty {
+                    SearchednewsBehaviour.accept([])
+                    placeHolderBehaviourRelay.accept(true)
+                }
+                else {
+                    SearchednewsBehaviour.accept(model.articles)
+                    placeHolderBehaviourRelay.accept(false)
+                    searchedIndex += 1
+                }
+                
+            case .failure(let error):
                 print(error.message)
             }
         }

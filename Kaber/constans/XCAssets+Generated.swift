@@ -38,6 +38,7 @@ internal enum images {
   internal static let primaryDefault = ColorAsset(name: "Primary - default")
   internal static let buttonFont = ColorAsset(name: "button font")
   internal static let author = ImageAsset(name: "Author")
+  internal static let cancel = ImageAsset(name: "Cancel")
   internal static let alertImage = ImageAsset(name: "alertImage")
   internal static let articleImage = ImageAsset(name: "articleImage")
   internal static let homeScreenLogo = ImageAsset(name: "homeScreenLogo")
@@ -47,6 +48,7 @@ internal enum images {
   internal static let on = ImageAsset(name: "on")
   internal static let searchIcon = ImageAsset(name: "searchIcon")
   internal static let share = ImageAsset(name: "share")
+  internal static let thereisNoResult = ImageAsset(name: "thereisNoResult")
   internal static let time = ImageAsset(name: "time")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

@@ -6,13 +6,6 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>8.8.8.8</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-			</dict>
 			<key>newsapi.org</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>

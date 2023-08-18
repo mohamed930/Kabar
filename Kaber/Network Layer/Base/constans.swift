@@ -7,7 +7,7 @@
 
 import Foundation
 
-var apiToken = "9a95acef21be4858a910e63a25ca0a5a"
+var apiToken = "0f06587973cb400d9d5346d81017a896"
 
 enum Api: String {
     case baseURL = "https://newsapi.org/v2/"

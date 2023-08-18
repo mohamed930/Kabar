@@ -28,14 +28,27 @@ extension newsNetworking: TargetType {
     var task: Task {
         switch self {
         case .fetchAllNews(let q,let language, let sortBy,let pageSize,let page):
-            let params = [
+            var params: [String: Any]!
+            if language.isEmpty {
+                params = [
+                            "q": q,
+                            "sortBy": sortBy.rawValue,
+                            "pageSize": pageSize,
+                            "page": page
+                         ]
+            }
+            else {
+                params = [
                             "q": q,
                             "language": language,
                             "sortBy": sortBy.rawValue,
                             "pageSize": pageSize,
                             "page": page
-                         ] as [String: Any]
-            print(params)
+                         ]
+            }
+
+            
+            print(params ?? [:])
             
             return .requestParameters(parameters: params, encoding: URLEncoding(destination: .queryString))
         }

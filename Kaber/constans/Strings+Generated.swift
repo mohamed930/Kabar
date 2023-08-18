@@ -14,6 +14,8 @@ internal enum myStrings {
   internal static let attension = myStrings.tr("Localizable", "Attension", fallback: "Attension")
   /// Article Details
   internal static let details = myStrings.tr("Localizable", "details", fallback: "Article Details")
+  /// Please write some keywords to find for you
+  internal static let keywords = myStrings.tr("Localizable", "keywords", fallback: "Please write some keywords to find for you")
   /// Localizable.strings
   ///   Kaber
   /// 
