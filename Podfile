@@ -3,6 +3,7 @@
 
 target 'Kaber' do
   # Comment the next line if you don't want to use dynamic frameworks
+  project 'Kaber'
   use_frameworks!
 
   # Pods for Kaber

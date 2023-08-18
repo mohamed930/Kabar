@@ -8,15 +8,12 @@
 //
 import Foundation
 import Reachability
-import SimplePing
 import RxCocoa
+import Alamofire
 
 class NetworkManagerReachability: NSObject {
     
     var reachability: Reachability!
-    
-    private var ping: SimplePing!
-    private var pingCompletion: ((Bool) -> Void)!
     
     static let sharedInstance: NetworkManagerReachability = { return NetworkManagerReachability() }()
     var connectionBehaviour = BehaviorRelay<Bool?>(value: nil)
@@ -26,6 +23,15 @@ class NetworkManagerReachability: NSObject {
         super.init()
         
         reachability = try! Reachability()
+        
+        reachability.whenReachable = { _ in
+            NetworkManagerReachability.sharedInstance.connectionBehaviour.accept(true)
+        }
+
+        reachability.whenUnreachable = { _ in
+            NetworkManagerReachability.sharedInstance.connectionBehaviour.accept(false)
+        }
+
         
         NotificationCenter.default.addObserver(
             self,
@@ -44,33 +50,25 @@ class NetworkManagerReachability: NSObject {
     
     @objc func networkStatusChanged(_ notification: Notification) {
         
-        NetworkManagerReachability.sharedInstance.reachability.whenUnreachable = { reachability in
+        reachability.whenUnreachable = { [unowned self] reachability in
             print("F\(#line): unreachable")
-            self.connectionBehaviour.accept(false)
+            
+            connectionBehaviour.accept(false)
         }
         
-        NetworkManagerReachability.sharedInstance.reachability.whenReachable = { [weak self]  reachability in
+        reachability.whenReachable = { [weak self]  reachability in
             
             guard let self = self else { return }
             
-            print("F\(#line): reachable")
-            
-            pingIP("8.8.8.8")
-            
-            pingCompletion = { [weak self] status in
-                guard let self = self else { return }
-                print(status)
-                
-                switch status {
-                    case true:
-                        print("reachable")
-                        connectionBehaviour.accept(true)
-                        ping?.stop()
-                    case false:
-                        print("F\(#line): unreachable")
-                        connectionBehaviour.accept(false)
-                }
+            if reachability.connection == .wifi || reachability.connection == .cellular {
+                print("F\(#line): reachable")
+                connectionBehaviour.accept(true)
             }
+            else {
+                print("F\(#line): unreachable")
+                connectionBehaviour.accept(false)
+            }
+            
             
         }
     }
@@ -113,25 +111,45 @@ class NetworkManagerReachability: NSObject {
         }
     }
     
-    func pingIP(_ ip: String) {
-        ping = SimplePing(hostName: ip)
-        ping.delegate = self
-        ping.start()
+    
+    func checkNetworkConnectivity() {
+        let targetURL = "https://www.google.com" // Replace with a reliable host
+
+        AF.request(targetURL)
+            .response { [weak self] response in
+                guard let self = self else { return }
+                
+                if let error = response.error {
+                    print("Network is not reachable:", error)
+                    connectionBehaviour.accept(false)
+                } else {
+                    print("Network is reachable")
+                    connectionBehaviour.accept(true)
+                }
+            }
     }
+    
+    
  }
 
-extension NetworkManagerReachability: SimplePingDelegate {
+//extension NetworkManagerReachability: SimplePingDelegate {
+//
 //    func simplePing(_ pinger: SimplePing, didStartWithAddress address: Data) {
-//        pinger.send(with: address)
+//
+//        ping.send(with: nil)
 //    }
-
-    func simplePing(_ pinger: SimplePing, didFailWithError error: Error) {
-        pingCompletion(false)
-        ping.start()
-    }
-
-    func simplePing(_ pinger: SimplePing, didReceivePingResponsePacket packet: Data, sequenceNumber: UInt16) {
-        pingCompletion(true)
-        ping.stop()
-    }
-}
+//
+//    func simplePing(_ pinger: SimplePing, didFailWithError error: Error) {
+//
+////        pingCompletion(false)
+//        connectionBehaviour.accept(false)
+//        ping.stop()
+//    }
+//
+//    func simplePing(_ pinger: SimplePing, didReceivePingResponsePacket packet: Data, sequenceNumber: UInt16) {
+//
+////        pingCompletion(true)
+//        connectionBehaviour.accept(true)
+//        ping.stop()
+//    }
+//}

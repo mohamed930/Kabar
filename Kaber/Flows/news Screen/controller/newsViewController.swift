@@ -90,21 +90,12 @@ class newsViewController: UIViewController {
     // -------------------------------------------
     
     func subscribeToInterConnectionRestore() {
-        let netowrk = NetworkManagerReachability()
-        
+       
         NetworkManagerReachability.sharedInstance.connectionBehaviour.asObservable().subscribe(onNext: { [weak self] isConnected in
             guard let self = self else { return }
-
-            print(isConnected)
             
-            NetworkManagerReachability.sharedInstance.reachability.whenReachable = { _ in
-                NetworkManagerReachability.sharedInstance.connectionBehaviour.accept(true)
-            }
+            guard let isConnected = isConnected else { return }
             
-            NetworkManagerReachability.sharedInstance.reachability.whenUnreachable = { _ in
-                NetworkManagerReachability.sharedInstance.connectionBehaviour.accept(false)
-            }
-
             if isConnected == true {
                 // Connection is available
                 print("Connected to the internet")
@@ -116,22 +107,9 @@ class newsViewController: UIViewController {
                 print("No internet connection")
                 connectionBannerView.isHidden = false
                 fetchArticlesFromLocalStorage()
+                dismissLoading()
             }
         }).disposed(by: disposebag)
-        
-//        NetworkManagerReachability.openNotifier()
-        
-//        let network = NetworkManagerReachability()
-//
-//        network.isReachable { [unowned self] _ in
-//            connectionBannerView.isHidden = true
-//            fetchArticlesFromServer()
-//        }
-//
-//        network.isUnreachable { [unowned self] _ in
-//            connectionBannerView.isHidden = false
-//            fetchArticlesFromLocalStorage()
-//        }
     }
     
     func subscribeToIsLoadingBehaviour() {
