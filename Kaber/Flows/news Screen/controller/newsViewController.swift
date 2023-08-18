@@ -19,7 +19,7 @@ class newsViewController: UIViewController {
     // MARK: - variables Here:
     var newsviewmodel: newsViewModel!
     let disposebag = DisposeBag()
-    let paddingValue: CGFloat = 34
+    let paddingValue: CGFloat = 38
     let newsCellStr = "newsCell"
     
     override func viewDidLoad() {
@@ -50,13 +50,21 @@ class newsViewController: UIViewController {
     
     func configureUI() {
         navigationController?.isNavigationBarHidden = false
-//        navigationItem.title = MOLHLanguage.currentAppleLanguage() == "en" ? "news" : "الاخبار"
         navigationItem.title = myStrings.news
+        
         self.changeFontForNavigationController()
         searchTextField.setLeftPaddingPoints(paddingValue)
         searchTextField.setRightPaddingPoints(paddingValue)
         searchTextField.attributedPlaceholder =
         NSAttributedString(string: myStrings.search, attributes: [NSAttributedString.Key.foregroundColor: images.bodyTextGrayScale.color])
+        
+        let appLanguage = fetchAppLanguage()
+        if appLanguage == "en" {
+            searchTextField.textAlignment = .left
+        }
+        else {
+            searchTextField.textAlignment = .right
+        }
     }
     
     func regesterTableView() {
@@ -153,6 +161,15 @@ class newsViewController: UIViewController {
     
     func fetchArticlesFromLocalStorage() {
         newsviewmodel.loadArticlesFromRealmSwiftOperaiton()
+    }
+    
+    func fetchAppLanguage() -> String {
+        let localStorage: LocalStorageProtocol = LocalStorage()
+        guard let lang: [String] = localStorage.value(key: LocalStorageKeys.AppleLanguages) else { return ""}
+        guard var pickedLang = lang.first else { return "" }
+        pickedLang = pickedLang.components(separatedBy: "-")[0]
+        
+        return pickedLang
     }
     
     // -------------------------------------------

@@ -44,16 +44,23 @@ class languageViewController: UIViewController {
     }
     
     func subscribeToChangeLanguageBehaviour() {
-        choocelanguageviewmodel.changeLanguageBehaviour.subscribe(onNext: { [unowned self] isChanged in
+        choocelanguageviewmodel.changeLanguageBehaviour.subscribe(onNext: { isChanged in
             
             if isChanged {
-                let alert = UIAlertController(title: myStrings.attension, message: myStrings.langMess, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: myStrings.restart, style: .default,handler: { _ in
-                    exit(0)
-                }))
                 
-                present(alert, animated: true)
+                // MARK: - solution One show alert make app restart:
+//                let alert = UIAlertController(title: myStrings.attension, message: myStrings.langMess, preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: myStrings.restart, style: .default,handler: { _ in
+//                    exit(0)
+//                }))
+//
+//                present(alert, animated: true)
+                
+                // MARK: - restart app within app.
+                AppCoordinator.shared.restart()
             }
+            
+            
         }).disposed(by: disposebag)
     }
     

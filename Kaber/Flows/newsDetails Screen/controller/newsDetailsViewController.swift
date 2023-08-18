@@ -100,10 +100,16 @@ class newsDetailsViewController: UIViewController {
                 dateLabel.text   = "\(hours)h ago"
             }
             
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                
-                articleImageView.loadImageFromServer(article.urlToImage ?? "")
+            if article.connection ?? true {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    
+                    articleImageView.loadImageFromServer(article.urlToImage ?? "")
+                }
+            }
+            else {
+                guard let img = article.urlToImageData else { return }
+                articleImageView.image = UIImage(data: img)
             }
             
             articleTitleLabel.text       = article.title

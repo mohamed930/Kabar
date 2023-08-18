@@ -55,7 +55,7 @@ final class AppCoordinator: BaseCoordinator {
         
         print("F: Entered here in start offline")
         
-        let coordinator = chooceLanguageCoordinator(navigationController: navigationController)
+        let coordinator = newsCoordinator(navigationController: navigationController)
         add(coordinator: coordinator)
         coordinator.start()
     }
