@@ -61,8 +61,6 @@ class chooceLanguageViewModel {
                 coordinator.goToNewsScreen()
             }
         }
-        
-//        coordinator.goToNewsScreen()
     }
     
     private func saveUserStatus() {

@@ -53,8 +53,6 @@ final class AppCoordinator: BaseCoordinator {
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let navigationController = window?.rootViewController as! UINavigationController
         
-        print("F: Entered here in start offline")
-        
         let coordinator = newsCoordinator(navigationController: navigationController)
         add(coordinator: coordinator)
         coordinator.start()

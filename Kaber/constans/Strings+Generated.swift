@@ -14,12 +14,14 @@ internal enum myStrings {
   internal static let attension = myStrings.tr("Localizable", "Attension", fallback: "Attension")
   /// Article Details
   internal static let details = myStrings.tr("Localizable", "details", fallback: "Article Details")
-  /// you must restart app to change language?
-  internal static let langMess = myStrings.tr("Localizable", "langMess", fallback: "you must restart app to change language?")
   /// Localizable.strings
   ///   Kaber
   /// 
   ///   Created by Mohamed Ali on 15/08/2023.
+  internal static let lang = myStrings.tr("Localizable", "Lang", fallback: "en")
+  /// you must restart app to change language?
+  internal static let langMess = myStrings.tr("Localizable", "langMess", fallback: "you must restart app to change language?")
+  /// news
   internal static let news = myStrings.tr("Localizable", "news", fallback: "news")
   /// Please wait
   internal static let pleaseWait = myStrings.tr("Localizable", "pleaseWait", fallback: "Please wait")

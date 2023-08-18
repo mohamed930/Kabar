@@ -58,8 +58,7 @@ class newsViewController: UIViewController {
         searchTextField.attributedPlaceholder =
         NSAttributedString(string: myStrings.search, attributes: [NSAttributedString.Key.foregroundColor: images.bodyTextGrayScale.color])
         
-        let appLanguage = fetchAppLanguage()
-        if appLanguage == "en" {
+        if MOLHLanguage.currentAppleLanguage() == "en" {
             searchTextField.textAlignment = .left
         }
         else {
@@ -163,14 +162,7 @@ class newsViewController: UIViewController {
         newsviewmodel.loadArticlesFromRealmSwiftOperaiton()
     }
     
-    func fetchAppLanguage() -> String {
-        let localStorage: LocalStorageProtocol = LocalStorage()
-        guard let lang: [String] = localStorage.value(key: LocalStorageKeys.AppleLanguages) else { return ""}
-        guard var pickedLang = lang.first else { return "" }
-        pickedLang = pickedLang.components(separatedBy: "-")[0]
-        
-        return pickedLang
-    }
+    
     
     // -------------------------------------------
 }

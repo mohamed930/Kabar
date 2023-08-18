@@ -6,6 +6,8 @@
   
 */
 
+"Lang"          = "en";
+
 "news"          = "news";
 "pleaseWait"    = "Please wait";
 "search"        = "Search";

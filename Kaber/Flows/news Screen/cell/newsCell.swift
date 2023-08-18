@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MOLH
 
 class newsCell: UITableViewCell {
     
@@ -28,6 +29,13 @@ class newsCell: UITableViewCell {
         super.awakeFromNib()
         
         disposebag = DisposeBag()
+        
+        if MOLHLanguage.currentAppleLanguage() == "en" {
+            descriptionLabel.textAlignment = .left
+        }
+        else {
+            descriptionLabel.textAlignment = .right
+        }
     }
     
     

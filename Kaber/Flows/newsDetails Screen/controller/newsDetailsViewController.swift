@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import MOLH
 
 class newsDetailsViewController: UIViewController {
     
@@ -71,6 +72,18 @@ class newsDetailsViewController: UIViewController {
 
         // Add the bar button item to the right side of the navigation bar
         navigationItem.rightBarButtonItem = barButtonItem
+        
+        
+        if MOLHLanguage.currentAppleLanguage() == "en" {
+            dateLabel.textAlignment = .left
+            articleTitleLabel.textAlignment = .left
+            articleDescribtionLabel.textAlignment = .left
+        }
+        else {
+            dateLabel.textAlignment = .right
+            articleTitleLabel.textAlignment = .right
+            articleDescribtionLabel.textAlignment = .right
+        }
     }
 
     // -------------------------------------------

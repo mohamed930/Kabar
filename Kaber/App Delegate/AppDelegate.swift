@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupKeyBoard()
         
         MOLH.shared.activate(true)
-        
         return true
     }
     
