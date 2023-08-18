@@ -21,6 +21,7 @@ class newsViewController: UIViewController {
     let disposebag = DisposeBag()
     let paddingValue: CGFloat = 38
     let newsCellStr = "newsCell"
+    var footerView: LoadMoreFooterView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class newsViewController: UIViewController {
         subscribeToInterConnectionRestore()
         subscribeToIsLoadingBehaviour()
         subscribeToSelectArticleTableView()
+        subscribeToPagingBehaviour()
         
         
         // Action button methods.
@@ -64,6 +66,12 @@ class newsViewController: UIViewController {
         else {
             searchTextField.textAlignment = .right
         }
+        
+        
+        // Create and set the custom refresh view as the footer
+        footerView = LoadMoreFooterView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44))
+        tableView.tableFooterView = footerView
+        tableView.rx.setDelegate(self).disposed(by: disposebag)
     }
     
     func regesterTableView() {
@@ -144,6 +152,20 @@ class newsViewController: UIViewController {
        }.disposed(by: disposebag)
     }
     
+    func subscribeToPagingBehaviour() {
+        newsviewmodel.pagaignLoadingBehaviour.subscribe(onNext: { [unowned self] isloading in
+            
+            if isloading {
+                  tableView.tableFooterView = footerView
+//                bottomRefreshView.beginRefreshing()
+            }
+            else {
+                tableView.tableFooterView = nil
+//                bottomRefreshView.endRefreshing()
+            }
+        }).disposed(by: disposebag)
+    }
+    
     // -------------------------------------------
     
     // MARK: - Methods that handle Button Actions in the UI.
@@ -165,4 +187,18 @@ class newsViewController: UIViewController {
     
     
     // -------------------------------------------
+}
+
+extension newsViewController: UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let threshold: CGFloat = 200 // Adjust this value as needed
+        let contentOffsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let distanceFromBottom = contentHeight - contentOffsetY - scrollView.bounds.height
+            
+        if distanceFromBottom < threshold && !newsviewmodel.pagaignLoadingBehaviour.value {
+            newsviewmodel.fetchNextPageOperation()
+        }
+    }
 }

@@ -14,6 +14,9 @@ class newsViewModel {
     var coordinator: newsCoordinator!
     let newsapi = newsAPI()
     
+    var pagaignLoadingBehaviour = BehaviorRelay<Bool>(value: false)
+    var currentPage: Int = 1
+    
     var isloadingBehaviour = BehaviorRelay<Bool>(value: false)
     
     private var newsBehaviour = BehaviorRelay<[ArticleModel]>(value: [])
@@ -35,13 +38,14 @@ class newsViewModel {
             switch response {
                 
             case .success(let model):
+                currentPage += 1
                 guard let model = model else { return }
                 newsBehaviour.accept(model.articles)
                 cacheTheArticleOffline()
                 
             case .failure(let error):
-                let e = error.userInfo[NSLocalizedDescriptionKey] as? String ?? ""
-                print(e)
+//                let e = error.userInfo[NSLocalizedDescriptionKey] as? String ?? ""
+                print(error.message)
             }
         }
     }
@@ -141,4 +145,32 @@ class newsViewModel {
         
         newsBehaviour.accept(articlesArr)
     }
+    
+    
+    func fetchNextPageOperation() {
+        pagaignLoadingBehaviour.accept(true)
+        
+        newsapi.fetchAllArticles(q: "*", page: currentPage) { [weak self] response in
+            guard let self = self else { return }
+            pagaignLoadingBehaviour.accept(false)
+            
+            switch response {
+                
+            case .success(let model):
+                currentPage += 1
+                guard let model = model else { return }
+                var aricles = newsBehaviour.value
+                aricles += model.articles
+                
+                newsBehaviour.accept(aricles)
+                cacheTheArticleOffline()
+                
+                
+            case .failure(let error):
+                pagaignLoadingBehaviour.accept(false)
+                print(error.message)
+            }
+        }
+    }
+    
 }
