@@ -69,9 +69,9 @@ To deploy this project run
 
 ## Screenshots
 
-news light mode Eng        |  news dark mode Ar
+news light mode Eng        |  news dark mode Eng
 :-------------------------:|:-------------------------:
-![Screenshot](https://i.postimg.cc/L5nK4786/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-07-35.png)  |  ![Screenshot](https://i.postimg.cc/2SqQdxVb/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-09-02.png)        
+![Screenshot](https://i.postimg.cc/L5nK4786/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-07-35.png)  |  ![Screenshot](https://i.postimg.cc/pTphJ68T/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-08-03.png)       
 
 
 news light mode Ar         |  news dark mode Ar
@@ -83,12 +83,12 @@ news details light mode Eng |  news details dark mode Eng
 :-------------------------: |:-------------------------:
 ![](https://i.postimg.cc/JhTcb4Lx/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-25-47.png)    |  ![](https://i.postimg.cc/DwvXBk5M/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-25-59.png)
 
-news details light mode Ar |  news details dark mode Eng
+news details light mode Ar |  news details dark mode Ar
 :-------------------------:|:-------------------------:
 ![](https://i.postimg.cc/xTtrNMZb/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-24-37.png)   |  ![](https://i.postimg.cc/XJJB3wtc/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-24-05.png)
 
 
-search suggestion light mode Eng |  search suggestion light mode Ara
+search suggestion light mode Eng |  search suggestion light mode Ar
 :-------------------------:|:-------------------------:
 ![](https://i.postimg.cc/3rqSs1z1/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-34-24.png)    |  ![](https://i.postimg.cc/CKJJmsjj/Simulator-Screenshot-i-Phone-14-Pro-2023-08-19-at-13-34-13.png)
 
