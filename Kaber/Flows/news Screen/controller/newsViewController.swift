@@ -29,6 +29,7 @@ class newsViewController: UIViewController {
     let newsCellStr   = "newsCell"
     let searchCellStr = "searchCell"
     var footerView: LoadMoreFooterView!
+    var tag: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -242,10 +243,22 @@ class newsViewController: UIViewController {
         newsviewmodel.pagaignLoadingBehaviour.subscribe(onNext: { [unowned self] isloading in
             
             if isloading {
-                  tableView.tableFooterView = footerView
+                if tag == 1 {
+                    tableView.tableFooterView = footerView
+                }
+                else {
+                    suggestionTableView.tableFooterView = footerView
+                }
+                  
             }
             else {
-                tableView.tableFooterView = nil
+                if tag == 1 {
+                    tableView.tableFooterView = nil
+                }
+                else {
+                    suggestionTableView.tableFooterView = nil
+                }
+                
             }
         }).disposed(by: disposebag)
     }
@@ -284,6 +297,7 @@ extension newsViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.tag == 1 {
+            tag = 1
             let threshold: CGFloat = 200 // Adjust this value as needed
             let contentOffsetY = scrollView.contentOffset.y
             let contentHeight = scrollView.contentSize.height
@@ -294,6 +308,7 @@ extension newsViewController: UITableViewDelegate {
             }
         }
         else {
+            tag = 2
             let threshold: CGFloat = 200 // Adjust this value as needed
             let contentOffsetY = scrollView.contentOffset.y
             let contentHeight = scrollView.contentSize.height

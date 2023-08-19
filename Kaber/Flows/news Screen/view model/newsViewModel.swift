@@ -55,6 +55,7 @@ class newsViewModel {
         newsapi.fetchAllArticles(q: "*", page: 1,language: MOLHLanguage.currentAppleLanguage()) { [weak self] response in
             guard let self = self else { return }
             isloadingBehaviour.accept(false)
+            pagaignLoadingBehaviour.accept(false)
             
             switch response {
                 
@@ -82,7 +83,7 @@ class newsViewModel {
             guard let realm = realmObj.realm else { return }
             
             // Fetch all existing articles sorted by publishedAt
-            var existingArticles = realm.objects(offlineArticleModel.self).sorted(byKeyPath: "publishedAt", ascending: true)
+            let existingArticles = realm.objects(offlineArticleModel.self).sorted(byKeyPath: "publishedAt", ascending: true)
             
             if existingArticles.count >= 50 {
                 try! realm.write {
@@ -150,7 +151,7 @@ class newsViewModel {
         guard let realm = realmObj.realm else { return }
         
         // Fetch all existing articles sorted by publishedAt
-        var articles = realm.objects(offlineArticleModel.self).sorted(byKeyPath: "publishedAt", ascending: true)
+        let articles = realm.objects(offlineArticleModel.self).sorted(byKeyPath: "publishedAt", ascending: true)
         
         var articlesArr = Array<ArticleModel>()
         for i in articles {
@@ -203,8 +204,10 @@ class newsViewModel {
     }
     
     func searchArticleOperation() {
+        pagaignLoadingBehaviour.accept(true)
         newsapi.fetchAllArticles(q: searchTextFieldBehaviourRelay.value, page: searchedIndex, language: "") { [weak self] response in
             guard let self = self else { return }
+            pagaignLoadingBehaviour.accept(false)
             
             switch response {
                 
@@ -216,7 +219,15 @@ class newsViewModel {
                     placeHolderBehaviourRelay.accept(true)
                 }
                 else {
-                    SearchednewsBehaviour.accept(model.articles)
+                    
+                    if searchedIndex > 1 {
+                        var oldArticle = SearchednewsBehaviour.value
+                        oldArticle += model.articles
+                        SearchednewsBehaviour.accept(oldArticle)
+                    }
+                    else {
+                        SearchednewsBehaviour.accept(model.articles)
+                    }
                     placeHolderBehaviourRelay.accept(false)
                     searchedIndex += 1
                 }
