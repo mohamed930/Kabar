@@ -59,10 +59,10 @@ class newsViewModel {
             switch response {
                 
             case .success(let model):
-                currentPage += 1
                 guard let model = model else { return }
                 newsBehaviour.accept(model.articles)
                 cacheTheArticleOffline()
+                currentPage += 1
                 
             case .failure(let error):
                 print(error.message)
@@ -74,45 +74,48 @@ class newsViewModel {
         let realmObj = RealmSwift()
         print(realmObj.realmFileLocation)
         
-        guard let realm = realmObj.realm else { return }
-        
-        let exsistingArticles = realm.objects(offlineArticleModel.self).sorted(byKeyPath: "publishedAt", ascending: true)
-        let existingArticleCount = exsistingArticles.count
-        
-        // If there are already 50 articles, delete the oldest ones
-       if existingArticleCount >= 50 {
-           try! realm.write {
-               realm.deleteAll()
-           }
-       }
-        
-        for i in newsBehaviour.value {
-            let article = offlineArticleModel()
-            article.id                  = UUID().uuidString
-            article.source              = i.source.name
-            article.author              = i.author
-            article.title               = i.title
-            article.artilceDescription  = i.description
-            article.url                 = i.url
-            article.publishedAt         = i.publishedAt
-            article.content             = i.content
-            article.urlToImage      = nil
+        if currentPage <= 2 {
             
-            if let imageUrl = i.urlToImage {
-                guard let urlToImage = URL(string: imageUrl) else {
-                    article.urlToImage = nil
-                    saveToRealm(model: article)
-                    return
-                }
+            let realmObj = RealmSwift()
+            print(realmObj.realmFileLocation)
+            
+            guard let realm = realmObj.realm else { return }
+            
+            // Fetch all existing articles sorted by publishedAt
+            var existingArticles = realm.objects(offlineArticleModel.self).sorted(byKeyPath: "publishedAt", ascending: true)
+            
+            if existingArticles.count >= 50 {
+                try! realm.write {
+                  realm.deleteAll()
+               }
+            }
+            
+            let newsArticles = newsBehaviour.value
+            for i in newsArticles {
+                let article = offlineArticleModel()
+                article.id                  = UUID().uuidString
+                article.source              = i.source.name
+                article.author              = i.author
+                article.title               = i.title
+                article.artilceDescription  = i.description
+                article.url                 = i.url
+                article.publishedAt         = i.publishedAt
+                article.content             = i.content
+                article.urlToImage          = nil
                 
-                saveImageToRealm(from: urlToImage) { [weak self] img, error in
-                    guard let self = self else { return }
-                    if let img = img {
+                if let imageUrl = i.urlToImage, let urlToImage = URL(string: imageUrl) {
+                    saveImageToRealm(from: urlToImage) { [weak self] img, error in
+                        guard let self = self, let img = img else { return }
                         article.urlToImage  = img
-                        saveToRealm(model: article)
+                        self.saveToRealm(model: article)
                     }
+                } else {
+                    saveToRealm(model: article)
                 }
             }
+        }
+        else {
+            print("F:\(#line): you can't write more article")
         }
     }
     
@@ -143,9 +146,14 @@ class newsViewModel {
     
     
     func loadArticlesFromRealmSwiftOperaiton() {
-        let storage: RealmSwiftProtocol = RealmSwift()
         
-        let articles: [offlineArticleModel] = storage.objects()
+        let realmObj = RealmSwift()
+        print(realmObj.realmFileLocation)
+        
+        guard let realm = realmObj.realm else { return }
+        
+        // Fetch all existing articles sorted by publishedAt
+        var articles = realm.objects(offlineArticleModel.self).sorted(byKeyPath: "publishedAt", ascending: true)
         
         var articlesArr = Array<ArticleModel>()
         for i in articles {
@@ -177,14 +185,13 @@ class newsViewModel {
             switch response {
                 
             case .success(let model):
-                currentPage += 1
                 guard let model = model else { return }
                 var aricles = newsBehaviour.value
                 aricles += model.articles
                 
                 newsBehaviour.accept(aricles)
                 cacheTheArticleOffline()
-                
+                currentPage += 1
                 
             case .failure(let error):
                 pagaignLoadingBehaviour.accept(false)
