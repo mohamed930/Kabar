@@ -114,9 +114,6 @@ class newsViewModel {
                 }
             }
         }
-        else {
-            print("F:\(#line): you can't write more article")
-        }
     }
     
     private func saveToRealm(model: offlineArticleModel) {

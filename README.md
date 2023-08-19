@@ -56,7 +56,7 @@ To deploy this project run
 
 ## Documentation
 
-[Documentation](https://drive.google.com/file/d/1UekG00hirJrm6oJmGouYw6rJUqYF8oGV/view?usp=sharing)
+[Documentation](https://drive.google.com/file/d/1AoXhx_lVPrq5_YoGmxuaHR_UVSSSzL1d/view?usp=share_link)
 
 
 ## Features
