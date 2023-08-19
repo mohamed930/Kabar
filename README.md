@@ -104,9 +104,9 @@ I started doing app to analysis the app rquirement in the PDF and write user sto
 
 Examble from this board:
 
-Screen shoot 1              |  Screen shoot 2
-:-------------------------:|:-------------------------:
-[![Screenshot-2023-08-19-at-1-50-39-PM.png](https://i.postimg.cc/zf6QNkcT/Screenshot-2023-08-19-at-1-50-39-PM.png)](https://postimg.cc/nsK2YqZL)   |  [![Screenshot-2023-08-19-at-1-50-43-PM.png](https://i.postimg.cc/9QSbwQYh/Screenshot-2023-08-19-at-1-50-43-PM.png)](https://postimg.cc/FYy32m6W)
+[![Screenshot-2023-08-19-at-1-50-39-PM.png](https://i.postimg.cc/C1tcyCm9/Screenshot-2023-08-19-at-1-50-39-PM.png)](https://postimg.cc/8JRRMv8b)
+
+[![Screenshot-2023-08-19-at-1-50-43-PM.png](https://i.postimg.cc/8z1B0nTj/Screenshot-2023-08-19-at-1-50-43-PM.png)](https://postimg.cc/0bBw6nMs)
 
 
 ## UI Reference
