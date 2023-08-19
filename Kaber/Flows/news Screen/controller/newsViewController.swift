@@ -297,15 +297,18 @@ extension newsViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.tag == 1 {
-            tag = 1
-            let threshold: CGFloat = 200 // Adjust this value as needed
-            let contentOffsetY = scrollView.contentOffset.y
-            let contentHeight = scrollView.contentSize.height
-            let distanceFromBottom = contentHeight - contentOffsetY - scrollView.bounds.height
-                
-            if distanceFromBottom < threshold && !newsviewmodel.pagaignLoadingBehaviour.value {
-                newsviewmodel.fetchNextPageOperation()
+            if NetworkManagerReachability.sharedInstance.connectionBehaviour.value ?? true {
+                tag = 1
+                let threshold: CGFloat = 200 // Adjust this value as needed
+                let contentOffsetY = scrollView.contentOffset.y
+                let contentHeight = scrollView.contentSize.height
+                let distanceFromBottom = contentHeight - contentOffsetY - scrollView.bounds.height
+                    
+                if distanceFromBottom < threshold && !newsviewmodel.pagaignLoadingBehaviour.value {
+                    newsviewmodel.fetchNextPageOperation()
+                }
             }
+            
         }
         else {
             tag = 2

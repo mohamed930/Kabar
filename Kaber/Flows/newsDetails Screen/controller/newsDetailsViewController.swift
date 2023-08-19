@@ -101,6 +101,11 @@ class newsDetailsViewController: UIViewController {
         newsdetailsviewmodel.articleBehaviour.asObservable().subscribe(onNext: { [unowned self] article in
             
             guard let article = article else { return }
+            
+            articleTitleLabel.text       = article.title
+            articleDescribtionLabel.text = article.description
+            
+            articleUrl = article.url
                     
             authorTitleLabel.text = article.author ?? "Unkown"
             
@@ -121,14 +126,12 @@ class newsDetailsViewController: UIViewController {
                 }
             }
             else {
-                guard let img = article.urlToImageData else { return }
+                guard let img = article.urlToImageData else {
+                    articleImageView.image = images.loadingImage.image
+                    return
+                }
                 articleImageView.image = UIImage(data: img)
             }
-            
-            articleTitleLabel.text       = article.title
-            articleDescribtionLabel.text = article.description
-            
-            articleUrl = article.url
             
         }).disposed(by: disposebag)
     }
