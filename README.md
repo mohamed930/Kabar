@@ -104,9 +104,9 @@ I started doing app to analysis the app rquirement in the PDF and write user sto
 
 Examble from this board:
 
-[![Screenshot-2023-08-19-at-1-50-39-PM.png](https://i.postimg.cc/C1tcyCm9/Screenshot-2023-08-19-at-1-50-39-PM.png)](https://postimg.cc/8JRRMv8b)
+ ![](https://i.postimg.cc/C1tcyCm9/Screenshot-2023-08-19-at-1-50-39-PM.png)
 
-[![Screenshot-2023-08-19-at-1-50-43-PM.png](https://i.postimg.cc/8z1B0nTj/Screenshot-2023-08-19-at-1-50-43-PM.png)](https://postimg.cc/0bBw6nMs)
+  ![](https://i.postimg.cc/8z1B0nTj/Screenshot-2023-08-19-at-1-50-43-PM.png)
 
 
 ## UI Reference
